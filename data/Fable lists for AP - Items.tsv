@@ -1,0 +1,652 @@
+Category	Item	CDEF	Inventory?	Comments
+Book	A Hero's Journey I			
+Book	A Hero's Journey II			
+Book	A Hero's Journey III			
+Book	A History Of The Guild			
+Book	A Love Story			
+Book	Book Of Spells			
+Book	Creatures Of Albion Book I			
+Book	Creatures Of Albion Book II			
+Book	Creatures Of Albion Book III			
+Book	Creatures Of The North			
+Book	Eyes Of A Killer			
+Book	Jack Of Blades			
+Book	Making Friends			
+Book	The Arena			
+Book	The Dragons			
+Book	The Guild Of Zeroes			
+Book	The Hierarchy Of Weapons			
+Book	The Northern Wastes			
+Book	The Oakvale Raid			
+Book	The Old Kingdom			
+Book	The Other Land			
+Book	The Pale Balverine			
+Book	The Repentant Alchemist			
+Book	The Sock Method			
+Book	The Tailor's Tragedy			
+Book	The Tale Of Maxley			
+Book	The Tale Of Twinblade			
+Book	The Trials Of Aarkan			
+Book	The Trigamist			
+Book	The Ugly Guide			
+Book	Three Haikus by Milo the Bard			
+Book	Windbreaker Rule Book			
+Book	You Are Not a Bad Person			
+Book	The Rotten Apple			
+Clothing	Aeon's Battle Boots			
+Clothing	Aeon's Battle Gauntlets			
+Clothing	Aeon's Battle Helmet			
+Clothing	Aeon's Battle Leggings			
+Clothing	Aeon's Chest Piece			
+Clothing	Apollo's Boots			
+Clothing	Apollo's Gloves			
+Clothing	Apollo's Hood			
+Clothing	Apollo's Shirt			
+Clothing	Apollo's Trousers			
+Clothing	Apprentice Boots			
+Clothing	Apprentice Gloves			
+Clothing	Apprentice Hooded Upper Robe			
+Clothing	Apprentice Lower Robe			
+Clothing	Apprentice Upper Robe			
+Clothing	Archon's Battle Boots			
+Clothing	Archon's Battle Chest Piece			
+Clothing	Archon's Battle Gauntlets			
+Clothing	Archon's Battle Helmet			
+Clothing	Archon's Battle Leggings			
+Clothing	Assassin Boots			
+Clothing	Assassin Gloves			
+Clothing	Assassin Shirt			
+Clothing	Assassin Trousers			
+Clothing	Borrowed Whisper's Boots			
+Clothing	Borrowed Whisper's Gloves			
+Clothing	Borrowed Whisper's Hat			
+Clothing	Borrowed Whisper's Shirt			
+Clothing	Borrowed Whisper's Shorts			
+Clothing	Bowerstone Guard Boots			
+Clothing	Bowerstone Guard Gloves			
+Clothing	Bowerstone Guard Hat			
+Clothing	Bowerstone Guard Shirt			
+Clothing	Bowerstone Guard Trousers			
+Clothing	Bright Chainmail Boots			
+Clothing	Bright Chainmail Gauntlets			
+Clothing	Bright Chainmail Helmet			
+Clothing	Bright Chainmail Leggings			
+Clothing	Bright Chainmail Shirt			
+Clothing	Bright Dress Gloves			
+Clothing	Bright Leather Boots			
+Clothing	Bright Leather Chest			
+Clothing	Bright Leather Gauntlets			
+Clothing	Bright Leather Leggings			
+Clothing	Bright Lower Dress			
+Clothing	Bright Plate Boots			
+Clothing	Bright Plate Chest Piece			
+Clothing	Bright Plate Gauntlets			
+Clothing	Bright Plate Leggings			
+Clothing	Bright Upper Dress			
+Clothing	Bright Villager Boots			
+Clothing	Bright Villager Gloves			
+Clothing	Bright Villager Shirt			
+Clothing	Bright Villager Trousers			
+Clothing	Bright Wizard Hat			
+Clothing	Chainmail Boots			
+Clothing	Chainmail Gauntlets			
+Clothing	Chainmail Helmet			
+Clothing	Chainmail Leggings			
+Clothing	Chainmail Shirt			
+Clothing	Chicken Hat			
+Clothing	Dark Chainmail Boots			
+Clothing	Dark Chainmail Gauntlets			
+Clothing	Dark Chainmail Helm			
+Clothing	Dark Chainmail Leggings			
+Clothing	Dark Chainmail Shirt			
+Clothing	Dark Dress Gloves			
+Clothing	Dark Leather Boots			
+Clothing	Dark Leather Chest			
+Clothing	Dark Leather Gauntlets			
+Clothing	Dark Leather Leggings			
+Clothing	Dark Lower Dress			
+Clothing	Dark Plate Boots			
+Clothing	Dark Plate Chest Piece			
+Clothing	Dark Plate Gauntlets			
+Clothing	Dark Plate Leggings			
+Clothing	Dark Upper Dress			
+Clothing	Dark Villager Boots			
+Clothing	Dark Villager Gloves			
+Clothing	Dark Villager Shirt			
+Clothing	Dark Villager Suit			
+Clothing	Dark Villager Trousers			
+Clothing	Dark Will User's Boots			
+Clothing	Dark Will User's Gloves			
+Clothing	Dark Will User's Upper Robe			
+Clothing	Dark Will User's Lower Robe			
+Clothing	Dark Wizard Hat			
+Clothing	Dave's Hat			
+Clothing	Dress Gloves			
+Clothing	Fire Assassin Boots			
+Clothing	Fire Assassin Gloves			
+Clothing	Fire Assassin Shirt			
+Clothing	Fire Assassin Trousers			
+Clothing	Fisherman's Hat			
+Clothing	Guard Boots			
+Clothing	Guard Gloves			
+Clothing	Guard Hat			
+Clothing	Guard Shirt			
+Clothing	Guard Trousers			
+Clothing	Graduate Boots			
+Clothing	Graduate Gloves			
+Clothing	Graduate Lower Robe			
+Clothing	Graduate Upper Robe			
+Clothing	Guildmaster's Spare Boots			
+Clothing	Guildmaster's Spare Gloves			
+Clothing	Guildmaster's Spare Shirt			
+Clothing	Guildmaster's Spare Shorts			
+Clothing	Holy Warrior Helm			
+Clothing	Jack Of Blades Boots			
+Clothing	Jack Of Blades Gauntlets			
+Clothing	Jack Of Blades Hooded Upper Robe			
+Clothing	Jack Of Blades Lower Robe			
+Clothing	Knothole Guard Boots			
+Clothing	Knothole Guard Gloves			
+Clothing	Knothole Guard Hat			
+Clothing	Knothole Guard Shirt			
+Clothing	Knothole Guard Trousers			
+Clothing	Lady Grey Cosplay Gloves			
+Clothing	Lady Grey Cosplay Headwear			
+Clothing	Lady Grey Cosplay Upper Dress			
+Clothing	Lady Grey Cosplay Lower Dress			
+Clothing	Leather Armour Boots			
+Clothing	Leather Armour Chest Piece			
+Clothing	Leather Armour Gauntlets			
+Clothing	Leather Armour Helmet			
+Clothing	Leather Armour Leggings			
+Clothing	Leather Boots			
+Clothing	Leather Chest Piece			
+Clothing	Leather Gauntlets			
+Clothing	Leather Leggings			
+Clothing	Lion's Head Helm			
+Clothing	Lower Dress			
+Clothing	Maze's Lost Boots			
+Clothing	Maze's Lost Gloves			
+Clothing	Maze's Lost Shirt			
+Clothing	Maze's Lost Trousers			
+Clothing	Minion Fancy Dress Boots			
+Clothing	Minion Fancy Dress Chest Piece			
+Clothing	Minion Fancy Dress Gloves			
+Clothing	Minion Fancy Dress Hat			
+Clothing	Minion Fancy Dress Leggings			
+Clothing	Obsidian Boots			
+Clothing	Obsidian Chest Piece			
+Clothing	Obsidian Gauntlets			
+Clothing	Obsidian Helmet			
+Clothing	Obsidian Leggings			
+Clothing	Peiratēs Boots			
+Clothing	Peiratēs Gauntlets			
+Clothing	Peiratēs Hat			
+Clothing	Peiratēs Shirt			
+Clothing	Peiratēs Trousers			
+Clothing	Plate Boots			
+Clothing	Plate Chest Piece			
+Clothing	Plate Gauntlets			
+Clothing	Plate Leggings			
+Clothing	Pre-Owned Thunder Boots			
+Clothing	Pre-Owned Thunder Chest Piece			
+Clothing	Pre-Owned Thunder Gauntlets			
+Clothing	Pre-Owned Thunder Helmet			
+Clothing	Pre-Owned Thunder Trousers			
+Clothing	Prophet Upper Robe			
+Clothing	Prophet Lower Robe			
+Clothing	Prophet Gloves			
+Clothing	Prophet Boots			
+Clothing	Redhead Wig			
+Clothing	Scythe's Charity Boots			
+Clothing	Scythe's Charity Gauntlets			
+Clothing	Scythe's Charity Headwear			
+Clothing	Scythe's Charity Upper Robe			
+Clothing	Scythe's Charity Lower Robe			
+Clothing	Snowspire Guard Boots			
+Clothing	Snowspire Guard Gloves			
+Clothing	Snowspire Guard Headwear			
+Clothing	Snowspire Guard Shirt			
+Clothing	Snowspire Guard Trousers			
+Clothing	Upper Dress			
+Clothing	Villager Boots			
+Clothing	Villager Gloves			
+Clothing	Villager Shirt			
+Clothing	Villager Trousers			
+Clothing	Wasp Boots			
+Clothing	Wasp Chest Piece			
+Clothing	Wasp Gloves			
+Clothing	Wasp Hat			
+Clothing	Wasp Trousers			
+Clothing	Will Bright Lower Robe			
+Clothing	Will Bright Upper Robe			
+Clothing	Will Lower Robe			
+Clothing	Will Upper Robe			
+Clothing	Will User's Boots			
+Clothing	Will User's Bright Boots			
+Clothing	Will User's Bright Gloves			
+Clothing	Will User's Gloves			
+Emote	Apologise			
+Emote	Air Guitar			
+Emote	Avisto			
+Emote	Ballet Dance			
+Emote	Belch			
+Emote	Blood Lust Roar			
+Emote	Calran			
+Emote	Cock-A-Doodle-Do			
+Emote	Cossack Dance			
+Emote	Crotch Grab			
+Emote	Disco Dance			
+Emote	Fart			
+Emote	Flamenco Dance			
+Emote	Flirt			
+Emote	Follow			
+Emote	Giggle			
+Emote	Insult			
+Emote	Kiss My Ass			
+Emote	Lockpick			
+Emote	Manly Arm Pump			
+Emote	Middle Finger			
+Emote	Moryk			
+Emote	Scary Laugh			
+Emote	Sexy Hero Pose			
+Emote	Sneer			
+Emote	Tap Dance			
+Emote	Thanks			
+Emote	Vulgar Thrust			
+Emote	Wait			
+Emote	Yeron			
+Food	Apple Pie			
+Food	Beer			
+Food	Blueberry Pie			
+Food	Carrot			
+Food	Crunchy Chick			
+Food	Fish 1			
+Food	Fish 2			
+Food	Golden Carrot			
+Food	Green Apple			
+Food	Moonfish			
+Food	Red Meat			
+Food	Tofu			
+Gift	Amethyst			
+Gift	Black Rose			
+Gift	Chocolates			
+Gift	Diamond			
+Gift	Emerald			
+Gift	Fake Wedding Ring			
+Gift	Jet			
+Gift	Perfume			
+Gift	Red Rose			
+Gift	Ruby			
+Gift	Sapphire			
+Gift	Teddy Bear			
+Gift	Wedding Ring			
+Gold	1 Gold			
+Gold	5 Gold			
+Gold	20 Gold			
+Gold	25 Gold			
+Gold	50 Gold			
+Gold	100 Gold			
+Gold	125 Gold			
+Gold	160 Gold			
+Gold	180 Gold			
+Gold	200 Gold			
+Gold	250 Gold			
+Gold	275 Gold			
+Gold	300 Gold			
+Gold	375 Gold			
+Gold	400 Gold			
+Gold	500 Gold			
+Gold	600 Gold			
+Gold	750 Gold			
+Gold	800 Gold			
+Gold	900 Gold			
+Gold	1000 Gold			
+Gold	1100 Gold			
+Gold	1200 Gold			
+Gold	1300 Gold			
+Gold	1400 Gold			
+Gold	1500 Gold			
+Gold	1600 Gold			
+Gold	1800 Gold			
+Gold	1900 Gold			
+Gold	2000 Gold			
+Gold	2200 Gold			
+Gold	2500 Gold			
+Gold	2600 Gold			
+Gold	3000 Gold			
+Gold	3500 Gold			
+Gold	4000 Gold			
+Gold	4200 Gold			
+Gold	4500 Gold			
+Gold	4600 Gold			
+Gold	5000 Gold			
+Gold	5400 Gold			
+Gold	5500 Gold			
+Gold	5800 Gold			
+Gold	6000 Gold			
+Gold	6200 Gold			
+Gold	7000 Gold			
+Gold	8000 Gold			
+Gold	10000 Gold			
+Gold	15000 Gold			
+Gold	16000 Gold			
+Gold	18000 Gold			
+Gold	20000 Gold			
+Gold	22000 Gold			
+Gold	25000 Gold			
+Gold	27000 Gold			
+Gold	28000 Gold			
+Gold	28500 Gold			
+Gold	28600 Gold			
+Melee	Avo's Tear			
+Melee	Axel The Axe			
+Melee	Big Clucking Hammer			
+Melee	Blacksmithy's Bludgeoner			
+Melee	Cutlass Bluetane			
+Melee	Dollmaster's Mace			
+Melee	Hobbecaster			
+Melee	Iron Axe			
+Melee	Iron Cleaver			
+Melee	Iron Greataxe			
+Melee	Iron Greathammer			
+Melee	Iron Greatmace			
+Melee	Iron Greatsword			
+Melee	Iron Katana			
+Melee	Iron Longsword			
+Melee	Iron Mace			
+Melee	Iron Pickhammer			
+Melee	Kraken Catcher			
+Melee	Master Greataxe			
+Melee	Master Katana			
+Melee	Master Cleaver			
+Melee	Master Mace			
+Melee	Master Greathammer			
+Melee	Master Axe			
+Melee	Master Greatmace			
+Melee	Master Greatsword			
+Melee	Master Longsword			
+Melee	Master Pickhammer			
+Melee	Murren Greathammer			
+Melee	N.W.A. Staff			
+Melee	Obsidian Axe			
+Melee	Obsidian Cleaver			
+Melee	Obsidian Greataxe			
+Melee	Obsidian Greathammer			
+Melee	Obsidian Greatmace			
+Melee	Obsidian Greatsword			
+Melee	Obsidian Katana			
+Melee	Obsidian Longsword			
+Melee	Obsidian Mace			
+Melee	Obsidian Pickhammer			
+Melee	Oneblade			
+Melee	Orkon's Club			
+Melee	Peiratēs Cutlass			
+Melee	Rise Of The Fenix			
+Melee	Steel Axe			
+Melee	Steel Cleaver			
+Melee	Steel Greataxe			
+Melee	Steel Greathammer			
+Melee	Steel Greatmace			
+Melee	Steel Greatsword			
+Melee	Steel Katana			
+Melee	Steel Longsword			
+Melee	Steel Mace			
+Melee	Steel Pickhammer			
+Melee	Stick			
+Melee	Solus Greatsword			
+Melee	Sophia's Sword			
+Melee	Sword Of Strategia			
+Melee	The Big Boo			
+Melee	The Buzzaxe			
+Melee	The Harbinger			
+Melee	The Headbanger			
+Melee	The Jackarse			
+Melee	The Katana Hiryu			
+Melee	The Murren Greataxe			
+Melee	The Sentinus			
+Melee	Undead Axe			
+Melee	Wardog's Sword			
+Melee	Weapon Of The Damned			
+Melee	Wellow's Pickhammer			
+Misc	Beer Keg			
+Misc	Briar Rose Hero Doll			
+Misc	Cider Crate			
+Misc	Demon Relic			
+Misc	Flour Sack			
+Misc	Grain Sack			
+Misc	Jack Hero Doll			
+Misc	Rock Of Necrilia			
+Misc	Skorm's Tear			
+Misc	Slab Of Jeroen			
+Misc	Tablet Of Torment			
+Misc	Thunder Hero Doll			
+Misc	Doll Of You			
+Misc	Fist Fight Level 4 Passed			
+Misc	Flame Augmentation			
+Misc	Experience Augmentation			
+Misc	Health Augmentation			
+Misc	Lightning Augmentation			
+Misc	Mana Augmentation			
+Misc	Piercing Augmentation			
+Misc	Silver Augmentation			
+Misc	Sharpening Augmentation			
+Potion	Ages Of Might Potion			
+Potion	Ages Of Skill Potion			
+Potion	Ages Of Will Potion			
+Potion	Elixir Of Life	4294	Yes	
+Potion	Health Potion			
+Potion	Resurrection Phial			
+Potion	Will Master's Elixir			
+Potion	Will Potion			
+Quest	Avisto's Tablet			
+Quest	Arban's Thaumaturgica			
+Quest	Bandit Bandana			
+Quest	Bandit Boots			
+Quest	Bandit Camp Pass			
+Quest	Bandit Gloves			
+Quest	Bandit Trousers			
+Quest	Bandit Seal			
+Quest	Bandit Shirt			
+Quest	Blue Mushroom			
+Quest	Calran's Tablet			
+Quest	Cooking Apple			
+Quest	Dusty Notebook			
+Quest	Fire Heart			
+Quest	Fist Fight Level 1 Passed			
+Quest	Fist Fight Level 2 Passed			
+Quest	Fist Fight Level 3 Passed			
+Quest	Hexagon Key			
+Quest	Key To Hostage Cage			
+Quest	Moryk's Tablet			
+Quest	Nostro's Armor			
+Quest	Nostro's Helmet			
+Quest	Nostro's Shield			
+Quest	Nostro's Sword			
+Quest	Prison Cell Key			
+Quest	Letter From Cyril			
+Quest	Reply From Myra			
+Quest	Letter From Myra			
+Quest	Silver Key			
+Quest	Scrawled Parchment			
+Quest	Treasure Clue 1			
+Quest	Treasure Clue 2			
+Quest	Treasure Clue 3			
+Quest	Treasure Clue 4			
+Quest	Treasure Clue 5			
+Quest	Treasure Clue 6			
+Quest	Witch's Potion			
+Quest	Yeron's Tablet			
+Ranged	Apollo's Crossbow			
+Ranged	Arken's Crossbow			
+Ranged	Bandit Crossbow			
+Ranged	Dragonstomper .01			
+Ranged	Ebony Crossbow			
+Ranged	Ebony Longbow			
+Ranged	Elite Crossbow			
+Ranged	Master Crossbow			
+Ranged	Master Longbow			
+Ranged	Oak Crossbow			
+Ranged	Oak Longbow			
+Ranged	Skorm's Bow			
+Ranged	Yew Crossbow			
+Ranged	Yew Longbow			
+Spell	Progressive Assassin Rush 1			
+Spell	Progressive Assassin Rush 2			
+Spell	Progressive Assassin Rush 3			
+Spell	Maximum Assassin Rush			
+Spell	Progressive Battle Charge 1			
+Spell	Progressive Battle Charge 2			
+Spell	Progressive Battle Charge 3			
+Spell	Maximum Battle Charge			
+Spell	Progressive Berserk 1			
+Spell	Progressive Berserk 2			
+Spell	Progressive Berserk 3			
+Spell	Maximum Berserk			
+Spell	Progressive Divine Fury 1			
+Spell	Progressive Divine Fury 2			
+Spell	Progressive Divine Fury 3			
+Spell	Maximum Divine Fury			
+Spell	Progressive Drain Life 1			
+Spell	Progressive Drain Life 2			
+Spell	Progressive Drain Life 3			
+Spell	Maximum Drain Life			
+Spell	Progressive Enflame 1			
+Spell	Progressive Enflame 2			
+Spell	Progressive Enflame 3			
+Spell	Maximum Enflame			
+Spell	Progressive Fireball 1			
+Spell	Progressive Fireball 2			
+Spell	Progressive Fireball 3			
+Spell	Maximum Fireball			
+Spell	Progressive Force Push 1			
+Spell	Progressive Force Push 2			
+Spell	Progressive Force Push 3			
+Spell	Maximum Force Push			
+Spell	Progressive Ghost Sword 1			
+Spell	Progressive Ghost Sword 2			
+Spell	Progressive Ghost Sword 3			
+Spell	Maximum Ghost Sword			
+Spell	Progressive Heal Life 1			
+Spell	Progressive Heal Life 2			
+Spell	Progressive Heal Life 3			
+Spell	Maximum Heal Life			
+Spell	Progressive Infernal Wrath 1			
+Spell	Progressive Infernal Wrath 2			
+Spell	Progressive Infernal Wrath 3			
+Spell	Maximum Infernal Wrath			
+Spell	Progressive Lightning 1			
+Spell	Progressive Lightning 2			
+Spell	Progressive Lightning 3			
+Spell	Maximum Lightning			
+Spell	Progressive Multi Arrow 1			
+Spell	Progressive Multi Arrow 2			
+Spell	Progressive Multi Arrow 3			
+Spell	Maximum Multi Arrow			
+Spell	Progressive Multi Strike 1			
+Spell	Progressive Multi Strike 2			
+Spell	Progressive Multi Strike 3			
+Spell	Maximum Multi Strike			
+Spell	Progressive Physical Shield 1			
+Spell	Progressive Physical Shield 2			
+Spell	Progressive Physical Shield 3			
+Spell	Maximum Physical Shield			
+Spell	Progressive Slow Time 1			
+Spell	Progressive Slow Time 2			
+Spell	Progressive Slow Time 3			
+Spell	Maximum Slow Time			
+Spell	Progressive Summon 1			
+Spell	Progressive Summon 2			
+Spell	Progressive Summon 3			
+Spell	Maximum Summon			
+Spell	Progressive Turncoat 1			
+Spell	Progressive Turncoat 2			
+Spell	Progressive Turncoat 3			
+Spell	Maximum Turncoat			
+Style	Big Beard			
+Style	Foreign Moustache			
+Style	Mutton Chop Beard			
+Style	Normal Beard			
+Style	Normal Haircut			
+Style	Plaits			
+Style	Ponytail			
+Style	Power Moustache			
+Style	Short Hair			
+Style	Small Moustache			
+Style	Standard Beard			
+Style	Strip Beard			
+Style	The Buzz			
+Style	The Pudding Basin			
+Style	Trader Style Moustache			
+Style	Tramp Beard			
+Style	Working Moustache			
+Style	Youngster Style			
+Tattoo	Arrowhead			
+Tattoo	Autumn Leaves			
+Tattoo	Big Blue Box, Chest			
+Tattoo	Big Blue Box, Back			
+Tattoo	Coron Birth			
+Tattoo	Coron Night			
+Tattoo	Coron Visor			
+Tattoo	Dark Vortex			
+Tattoo	Deathlicon			
+Tattoo	Dorgon			
+Tattoo	Dragon			
+Tattoo	Eyes Of Skorm			
+Tattoo	Eyes Of Avo			
+Tattoo	Fire Monkey			
+Tattoo	Furite Arm			
+Tattoo	Furite Deathhead, Chest			
+Tattoo	Furite Deathhead, Back			
+Tattoo	Furite Flame, Back			
+Tattoo	Furite Flame, Chest			
+Tattoo	Furite Flash			
+Tattoo	Furite Funeral			
+Tattoo	Furite Swirl			
+Tattoo	Furite War			
+Tattoo	Golden Harvest			
+Tattoo	Gryphonite			
+Tattoo	Harion, Arm			
+Tattoo	Harion, Shoulder			
+Tattoo	Harvest			
+Tattoo	Howl			
+Tattoo	Karlan Wings			
+Tattoo	Kryndon			
+Tattoo	Lionhead, Back			
+Tattoo	Lionhead, Chest			
+Tattoo	Poison Web			
+Tattoo	Seachaos, Arm			
+Tattoo	Seacorpse			
+Tattoo	Somrune			
+Tattoo	Spiral Dementia			
+Tattoo	Tallin Clan, Arm			
+Tattoo	Tallin Clan, Leg			
+Tattoo	Vambrace			
+Tool	Fishing Rod			
+Tool	Guild Seal			
+Tool	Lamp			
+Tool	Money Bag			
+Tool	Spade			
+Tool	The Rod Of Champions			
+Trophy	Archon's Circle			
+Trophy	Bandit Seal			
+Trophy	Champion's Seal			
+Trophy	Fire Heart Band			
+Trophy	Fist Fighter's Trophy			
+Trophy	Golden Fish			
+Trophy	Hobbe Head			
+Trophy	Hobbe Tooth			
+Trophy	King Scorpion Stinger			
+Trophy	Kraken Tooth			
+Trophy	Maze's Clasp			
+Trophy	Map To Lost Bay			
+Trophy	Minion's Helmet			
+Trophy	Silver Arrow			
+Trophy	Summoner's Gauntlet			
+Trophy	Thunder's Helmet			
+Trophy	Trader's Feather			
+Trophy	Trader's Head			
+Trophy	Undead Hand			
+Trophy	Wasp Queen's Head			
+Trophy	Whisper's Brooch			
+Trophy	White Balverine Head			
