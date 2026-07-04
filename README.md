@@ -101,7 +101,7 @@ Trophies (confirmed by screenshots):
 | 4496 | Wasp Queen's Head | ✓ |
 | 4497 | Evil Wasp Queen Head | dev test item ("not for the final game!") |
 | 4498 | King Scorpion Sting | ✓ ("King Scorpion Stinger") |
-| 4499 | Balverine's Head | added — sheet's "White Balverine Head" is likely 4512 `TROPHY_BALVERINE_FM_HEAD` (untested) |
+| 4499 | Balverine's Head | added — distinct row from the sheet's existing "White Balverine Head" (still untested, likely a different CDEF e.g. `TROPHY_BALVERINE_FM_HEAD` 4512) |
 | 4500 | Claw | added |
 | 4501 | Hero's Axe | added |
 | 4502 | Hero's Belt | added |
@@ -112,9 +112,21 @@ Trophies (confirmed by screenshots):
 | 4507 | Fist Fighters Trophy | ✓ ("Fist Fighter's Trophy") |
 | 4508 | Thunder's Helmet | ✓ |
 | 4509 | Kraken Tooth | ✓ |
-| 4510 | Archaeologist's Map | added — sheet's "Map To Lost Bay" is likely 4525 `TROPHY_SHIP_MAP` (untested) |
+| 4510 | Archaeologist's Map | added — distinct row from the sheet's existing "Map To Lost Bay" (still untested, likely a different CDEF e.g. `TROPHY_SHIP_MAP` 4525) |
 
-`data/Fable lists for AP - Items UPDATED.tsv` is the AP sheet with all confirmed CDEFs filled in (16 rows updated, 12 new rows).
+## Sheet sync
+
+We work in a **personal copy** of the shared Google Sheet ("Copy of Fable lists for AP"), not the shared one directly, to avoid live-editing something other testers depend on. `data/Fable lists for AP - Items.tsv` mirrors that copy's "Items" tab exactly.
+
+Sync process (no reliable automated export was found — Google blocks unauthenticated fetches on private sheets, and the in-browser download didn't land in an accessible folder in this environment):
+
+1. In the sheet: **File → Download → Tab Separated Values (.tsv)**.
+2. Move/rename the downloaded file into this repo's `data/` folder as `Fable lists for AP - Items.tsv` (overwriting the old copy).
+3. Commit and push.
+
+Do this after any batch of edits to the sheet (ours or manual). The reverse direction — new CDEFs confirmed via `batch_test_mod` — get entered into the sheet directly (via browser automation or by hand) before running this export, so the TSV always reflects the sheet's current state.
+
+Note: the sheet's own category assignments don't always match assumptions made earlier in this file — e.g. "Bandit Seal" exists as **two separate rows**, one under Quest (no CDEF) and one under Trophy (CDEF 4495, confirmed). Trust the TSV/sheet over category guesses in the tables above.
 
 ## Current workflow (per session)
 
@@ -139,7 +151,7 @@ Yaranorgoth published a prebuilt `fable1_mods.zip` (pinned in the Archipelago Di
 
 - `add_item_mod` now reads the CDEF from `mods/add_item_mod/add_item_id.txt` at F1-press — no recompile per ID (solves the same problem as our superseded outer-loop script).
 - The windowed hook moved into a separate `mods/windowed_mod/windowed_mod.dll` so it can be deleted independently.
-- Results are to be recorded in the shared Google Sheet ("Item" tab): the sheet this repo's `data/Fable lists for AP - Items*.tsv` files mirror.
+- Results are to be recorded in the shared Google Sheet ("Item" tab). We instead work in a personal copy of that sheet (see "Sheet sync" below) and haven't yet merged findings back into the shared one.
 
 His intended workflow is still one ID at a time by hand (edit txt → F1 → eyeball inventory → update sheet). `batch_test_mod` remains a generation ahead: whole lists per session, no keypresses, silent adds, crash-resume, machine-readable CSV.
 
@@ -155,4 +167,4 @@ His intended workflow is still one ID at a time by hand (edit txt → F1 → eye
 - [ ] Gold: find the direct "give gold" function (AddItemToInventory crashes)
 - [ ] Verify TLC CDEFs carry over to Fable Anniversary via the symlink workflow
 - [ ] Share findings/tooling with lgbarrere (batch_test_mod restructures his add-item flow; built as a separate mod so his originals are untouched)
-- [ ] Enter the confirmed CDEFs from `data/Fable lists for AP - Items UPDATED.tsv` into the shared Google Sheet ("Item" tab)
+- [ ] Decide whether/how to merge our personal sheet copy's confirmed CDEFs back into the shared Google Sheet ("Item" tab)

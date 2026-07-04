@@ -1,7 +1,7 @@
 Category	Item	CDEF	Inventory?	Comments
-Book	A Hero's Journey I			
-Book	A Hero's Journey II			
-Book	A Hero's Journey III			
+Book	A Hero's Journey I	4548	Yes	
+Book	A Hero's Journey II	4542	Yes	
+Book	A Hero's Journey III	4544	Yes	
 Book	A History Of The Guild			
 Book	A Love Story			
 Book	Book Of Spells			
@@ -14,25 +14,29 @@ Book	Jack Of Blades
 Book	Making Friends			
 Book	The Arena			
 Book	The Dragons			
-Book	The Guild Of Zeroes			
+Book	The Guild Of Zeroes	4550	Yes	
 Book	The Hierarchy Of Weapons			
 Book	The Northern Wastes			
-Book	The Oakvale Raid			
+Book	The Oakvale Raid	4545	Yes	
 Book	The Old Kingdom			
 Book	The Other Land			
 Book	The Pale Balverine			
-Book	The Repentant Alchemist			
+Book	The Repentant Alchemist	4540	Yes	
 Book	The Sock Method			
 Book	The Tailor's Tragedy			
 Book	The Tale Of Maxley			
 Book	The Tale Of Twinblade			
-Book	The Trials Of Aarkan			
+Book	The Trials Of Aarkan	4546	Yes	
 Book	The Trigamist			
 Book	The Ugly Guide			
 Book	Three Haikus by Milo the Bard			
 Book	Windbreaker Rule Book			
 Book	You Are Not a Bad Person			
-Book	The Rotten Apple			
+Book	The Rotten Apple	4541	Yes	
+Book	Sutter Family History	4539	Yes	Not previously on sheet; confirmed in-game
+Book	Avo Nice Day	4543	Yes	Not previously on sheet; confirmed in-game
+Book	The Bargate Poems	4547	Yes	Not previously on sheet; confirmed in-game
+Book	The story of 'x'	4549	Yes	Not previously on sheet; confirmed in-game
 Clothing	Aeon's Battle Boots			
 Clothing	Aeon's Battle Gauntlets			
 Clothing	Aeon's Battle Helmet			
@@ -629,24 +633,32 @@ Tool	Money Bag
 Tool	Spade			
 Tool	The Rod Of Champions			
 Trophy	Archon's Circle			
-Trophy	Bandit Seal			
+Trophy	Bandit Seal	4495	Yes	
 Trophy	Champion's Seal			
 Trophy	Fire Heart Band			
-Trophy	Fist Fighter's Trophy			
+Trophy	Fist Fighter's Trophy	4507	Yes	
 Trophy	Golden Fish			
 Trophy	Hobbe Head			
-Trophy	Hobbe Tooth			
-Trophy	King Scorpion Stinger			
-Trophy	Kraken Tooth			
+Trophy	Hobbe Tooth	4504	Yes	
+Trophy	King Scorpion Stinger	4498	Yes	
+Trophy	Kraken Tooth	4509	Yes	
 Trophy	Maze's Clasp			
 Trophy	Map To Lost Bay			
 Trophy	Minion's Helmet			
 Trophy	Silver Arrow			
 Trophy	Summoner's Gauntlet			
-Trophy	Thunder's Helmet			
+Trophy	Thunder's Helmet	4508	Yes	
 Trophy	Trader's Feather			
-Trophy	Trader's Head			
+Trophy	Trader's Head	4505	Yes	
 Trophy	Undead Hand			
-Trophy	Wasp Queen's Head			
+Trophy	Wasp Queen's Head	4496	Yes	
 Trophy	Whisper's Brooch			
 Trophy	White Balverine Head			
+Trophy	Evil Wasp Queen Head	4497	Yes	Dev test item - description says 'not for the final game!'; not previously on sheet
+Trophy	Balverine's Head	4499	Yes	Confirmed in-game; distinct from 'White Balverine Head' (row 656, still untested)
+Trophy	Claw	4500	Yes	Not previously on sheet; confirmed in-game
+Trophy	Hero's Axe	4501	Yes	Not previously on sheet; confirmed in-game
+Trophy	Hero's Belt	4502	Yes	Not previously on sheet; confirmed in-game
+Trophy	Lobster's Claw	4503	Yes	Not previously on sheet; confirmed in-game
+Trophy	Scrumpy Crate	4506	Yes	Not previously on sheet; confirmed in-game
+Trophy	Archaeologist's Map	4510	Yes	Not previously on sheet; confirmed in-game
