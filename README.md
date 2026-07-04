@@ -133,6 +133,18 @@ Trophies (confirmed by screenshots):
 - `deploy.bat` runs elevated; synthetic keyboard input from non-elevated processes won't reach the game (UIPI).
 - Windows Store Python 3.13 was used; heredoc/inline `python -c` with multi-line code is unreliable from Git Bash — script files are more dependable.
 
+## Upstream update (2026-07-04): fable1_mods.zip
+
+Yaranorgoth published a prebuilt `fable1_mods.zip` (pinned in the Archipelago Discord `#fable-anniversary` channel) plus `GuideToFindItemCDEFs.txt` recruiting manual testers. Changes on his side:
+
+- `add_item_mod` now reads the CDEF from `mods/add_item_mod/add_item_id.txt` at F1-press — no recompile per ID (solves the same problem as our superseded outer-loop script).
+- The windowed hook moved into a separate `mods/windowed_mod/windowed_mod.dll` so it can be deleted independently.
+- Results are to be recorded in the shared Google Sheet ("Item" tab): the sheet this repo's `data/Fable lists for AP - Items*.tsv` files mirror.
+
+His intended workflow is still one ID at a time by hand (edit txt → F1 → eyeball inventory → update sheet). `batch_test_mod` remains a generation ahead: whole lists per session, no keypresses, silent adds, crash-resume, machine-readable CSV.
+
+**Do not install his zip over a source-built setup** — his `dinput8.dll` replaces ours and drops the borderless + mouse/keyboard cooperative-level fixes (his `windowed_mod` is windowed-only). Building from our modified source provides everything the zip does and more. Untested: whether our `batch_test_mod` finds `g_AddingItemFromMod` in his rebuilt `add_item_mod.dll` (we resolve it at runtime to keep `cancel_vanilla_add_item_mod` from cancelling our adds); irrelevant while building everything from source.
+
 ## Next steps
 
 - [ ] Test remaining trophies 4511–4527 (resolves the White Balverine Head / Map To Lost Bay guesses)
@@ -143,3 +155,4 @@ Trophies (confirmed by screenshots):
 - [ ] Gold: find the direct "give gold" function (AddItemToInventory crashes)
 - [ ] Verify TLC CDEFs carry over to Fable Anniversary via the symlink workflow
 - [ ] Share findings/tooling with lgbarrere (batch_test_mod restructures his add-item flow; built as a separate mod so his originals are untouched)
+- [ ] Enter the confirmed CDEFs from `data/Fable lists for AP - Items UPDATED.tsv` into the shared Google Sheet ("Item" tab)
