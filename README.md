@@ -112,7 +112,35 @@ Trophies (confirmed by screenshots):
 | 4507 | Fist Fighters Trophy | ✓ ("Fist Fighter's Trophy") |
 | 4508 | Thunder's Helmet | ✓ |
 | 4509 | Kraken Tooth | ✓ |
-| 4510 | Archaeologist's Map | added — distinct row from the sheet's existing "Map To Lost Bay" (still untested, likely a different CDEF e.g. `TROPHY_SHIP_MAP` 4525) |
+| 4510 | Archaeologist's Map | added — distinct row from the sheet's existing "Map To Lost Bay" (that is 4525, confirmed session 2) |
+
+### Session 2 (batch of 44: trophies 4511–4527, books 4551–4577)
+
+All 44 tested `ADDED_OK`, zero crashes. Trophy display names confirmed by screenshot:
+
+| CDEF | In-game name | Notes |
+|---|---|---|
+| 4511 | Dragon Scale | Trophies tab (found via isolated test — hidden by duplicate-name collapsing in the full inventory) |
+| 4512 | White Balverine Head | resolves the row-656 flag |
+| 4513 | Golden Fish | |
+| 4514 | Hobbe Head | |
+| 4515 | Maze's Clasp | |
+| 4516 | Minion's Helmet | |
+| 4517 | Fist Fighters Trophy | **duplicate display name** — 4507 also shows as this; needs disambiguation |
+| 4518 | Scorpion Sting | new row; distinct from "King Scorpion Stinger" (4498) |
+| 4519 | Silver Arrow | |
+| 4520 | Trader's Feather | |
+| 4521 | Undead Hand | |
+| 4522 | Whisper's Brooch | |
+| 4523 | Jack's Mask | symbol `TROPHY_JOB_MASK`; appears in the **"Items: Other"** tab, not Trophies |
+| 4524 | Dragon Gate | `ADDED_OK` per log but **not visible in any inventory tab** — internal/non-holdable token; recorded `Inventory?=No` |
+| 4525 | Map to Lost Bay | resolves the row-646 flag |
+| 4526 | Summoner's Gauntlet | |
+| 4527 | Fire Heart Band | |
+
+Books 4551–4575: 4551=A Hero's Journey IV (new), and the `BOOK_GUILD_*` range (4555–4573) plus 4562/4564/4574/4575 map onto existing sheet book titles (The Arena, A Love Story, The Dragons, Book of Spells, Creatures of Albion I–III/North, The Guild of Zeroes, The Hierarchy of Weapons, The Northern Wastes, The Old Kingdom, The Other Land, The Pale Balverine, The Tale of Maxley, The Tale of Twinblade, Three Haikus, Theresa's Letter, The Bloodline) + new rows Seers and Prophets (4569). Sheet's "Three Haikus by Milo the Bard" shows in-game as "Miko" — spelling variant flagged.
+
+**Still unmapped from session 2** (tested `ADDED_OK`, not found in Books tab — likely Quest/Photo-Journal items): 4552/4553/4554 (`BOOK_STORY_14/15/16`), 4576 (`MAZE_JOURNAL`), 4577 (`HAUNTED_DIARY_01`).
 
 ## Sheet sync
 
@@ -144,6 +172,10 @@ Note: the sheet's own category assignments don't always match assumptions made e
 - The symlinker's option 4 junctions only `Levels/FinalAlbion` (for running the modded game) — it is unrelated to FESN's data loading.
 - `deploy.bat` runs elevated; synthetic keyboard input from non-elevated processes won't reach the game (UIPI).
 - Windows Store Python 3.13 was used; heredoc/inline `python -c` with multi-line code is unreliable from Git Bash — script files are more dependable.
+- **`ADDED_OK` ≠ player-visible.** Some CDEFs the engine accepts (`AddItemToInventory` returns 1) never appear in any inventory tab — e.g. Dragon Gate (4524). These are internal/non-holdable tokens; record `Inventory?=No` despite the OK.
+- **Inventory has multiple tabs beyond the obvious ones** (Trophies, Books, **Items: Other**, Quest, Photo Journal). An item can land in an unexpected tab (Jack's Mask, a `TROPHY_*` symbol, shows under "Items: Other"). When an item tests OK but isn't in the expected tab, check the others.
+- **Duplicate display names collapse in the full inventory list.** With a cluttered save, two CDEFs sharing a name (4507/4517 both "Fist Fighters Trophy") or items further down can be hidden. Testing a **single CDEF against a fresh game profile** disambiguates — that's how 4511/4523/4524 were pinned down.
+- Screenshot capture note: the delayed PowerShell `CopyFromScreen` grabs whatever is frontmost when it fires. The game minimizes on focus loss, so click the Fable **taskbar icon** (not just anywhere) during the countdown, or you capture the browser instead.
 
 ## Upstream update (2026-07-04): fable1_mods.zip
 
@@ -159,8 +191,10 @@ His intended workflow is still one ID at a time by hand (edit txt → F1 → eye
 
 ## Next steps
 
-- [ ] Test remaining trophies 4511–4527 (resolves the White Balverine Head / Map To Lost Bay guesses)
-- [ ] Test books 4551–4554 (`BOOK_STORY_13–16`) and 4555–4577 (`BOOK_GUILD_*` — symbols suggest they cover most remaining sheet books)
+- [x] Test trophies 4511–4527 — done session 2 (resolved White Balverine Head=4512, Map To Lost Bay=4525)
+- [x] Test books 4551–4577 — done session 2 (`BOOK_GUILD_*` map onto existing sheet titles as predicted)
+- [ ] Identify the 5 session-2 leftovers via isolated tests: 4552/4553/4554 (`BOOK_STORY_14/15/16`), 4576 (`MAZE_JOURNAL`), 4577 (`HAUNTED_DIARY_01`) — check Quest/Photo-Journal tabs
+- [ ] Disambiguate the 4507 vs 4517 "Fist Fighters Trophy" duplicate
 - [ ] Clothing (`OBJECT_HERO_*` 3404–3519) — large range, sheet names won't match symbols; screenshot mapping needed
 - [ ] Tattoo/haircut/beard cards (4326–4427)
 - [ ] Quest items, gifts, weapons not yet auto-matched
