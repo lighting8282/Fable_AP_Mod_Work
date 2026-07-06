@@ -56,6 +56,12 @@ constexpr DWORD kSettleAfterLoadMs = 5000; // wait after inventory first resolve
 char g_CdefListPath[MAX_PATH] = {};
 char g_ResultsPath[MAX_PATH] = {};
 
+// One-by-one (F1/F2) manual mode paths.
+char g_OneByOneListPath[MAX_PATH] = {};   // onebyone_list.txt (presence = enable)
+char g_OneByOneIndexPath[MAX_PATH] = {};  // onebyone_index.txt (0-based cursor)
+char g_GameDir[MAX_PATH] = {};            // <FTLC> root
+char g_FableExePath[MAX_PATH] = {};       // <FTLC>\Fable.exe
+
 // ---------------------------------------------------------------------------
 // Inventory resolution (same walk as add_item_mod)
 // ---------------------------------------------------------------------------
@@ -183,12 +189,12 @@ std::unordered_set<DWORD> LoadTested() {
   return tested;
 }
 
-std::vector<DWORD> LoadCdefList() {
+std::vector<DWORD> LoadCdefListFrom(const char *path) {
   std::vector<DWORD> cdefs;
   FILE *fp = nullptr;
-  fopen_s(&fp, g_CdefListPath, "r");
+  fopen_s(&fp, path, "r");
   if (!fp) {
-    Log("[BatchTest] Could not open CDEF list: %s", g_CdefListPath);
+    Log("[BatchTest] Could not open CDEF list: %s", path);
     return cdefs;
   }
   char buf[256];
@@ -201,15 +207,49 @@ std::vector<DWORD> LoadCdefList() {
   return cdefs;
 }
 
+std::vector<DWORD> LoadCdefList() { return LoadCdefListFrom(g_CdefListPath); }
+
 // ---------------------------------------------------------------------------
 // Main-thread execution via window subclass (engine TLS requirement)
 // ---------------------------------------------------------------------------
 #define WM_TEST_CDEF (WM_USER + 102)
 #define WM_CHECK_INVENTORY (WM_USER + 103)
+#define WM_ONEBYONE_SPAWN (WM_USER + 104)
 
 HWND g_GameHwnd = nullptr;
 WNDPROC g_OriginalWndProc = nullptr;
 volatile LONG g_TestDone = 0; // signaled after each WM_TEST_CDEF is handled
+
+std::vector<DWORD> g_OneByOneList;
+size_t g_OneByOneIndex = 0;
+
+// Adds one item to the hero inventory (silent), for the F1 manual spawn.
+// Logs to the mod log only (keeps batch_results.csv clean).
+void SpawnCurrentOneByOne() {
+  if (g_OneByOneIndex >= g_OneByOneList.size()) {
+    Log("[OneByOne] F1: list exhausted (index %zu).", g_OneByOneIndex);
+    return;
+  }
+  DWORD cdef = g_OneByOneList[g_OneByOneIndex];
+
+  DWORD dummy = 0;
+  void *inv = GetHeroInventory();
+  if (!inv || !SafeRead(inv, dummy)) {
+    Log("[OneByOne] F1: no inventory yet — load a save first (CDEF %lu not spawned).", cdef);
+    return;
+  }
+  void *item = CreateFableItem(cdef);
+  if (!item || !SafeRead(item, dummy)) {
+    Log("[OneByOne] F1: CreateFableItem failed for CDEF %lu.", cdef);
+    return;
+  }
+  auto fn = reinterpret_cast<AddItemToInventory_t>(kAddItemToInventoryAddr);
+  *g_pAddingItemFromMod = true;
+  char r = fn(inv, item, false, true, 0, true /*silent*/);
+  *g_pAddingItemFromMod = false;
+  Log("[OneByOne] F1: spawned CDEF %lu (index %zu) -> add result %d.",
+      cdef, g_OneByOneIndex, (int)(unsigned char)r);
+}
 
 void DoTestCdef(DWORD cdef) {
   DWORD dummy = 0;
@@ -247,6 +287,10 @@ LRESULT CALLBACK GameWndProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
     void *inv = GetHeroInventory();
     return (inv && SafeRead(inv, dummy)) ? 1 : 0;
   }
+  if (uMsg == WM_ONEBYONE_SPAWN) {
+    SpawnCurrentOneByOne();
+    return 0;
+  }
   return CallWindowProc(g_OriginalWndProc, hwnd, uMsg, wParam, lParam);
 }
 
@@ -260,6 +304,105 @@ BOOL CALLBACK EnumWindowsProc(HWND hwnd, LPARAM) {
     return FALSE;
   }
   return TRUE;
+}
+
+// ---------------------------------------------------------------------------
+// One-by-one (F1/F2) manual mode
+// ---------------------------------------------------------------------------
+size_t ReadOneByOneIndex() {
+  FILE *fp = nullptr;
+  fopen_s(&fp, g_OneByOneIndexPath, "r");
+  if (!fp)
+    return 0;
+  unsigned long idx = 0;
+  if (fscanf_s(fp, "%lu", &idx) != 1)
+    idx = 0;
+  fclose(fp);
+  return static_cast<size_t>(idx);
+}
+
+void WriteOneByOneIndex(size_t idx) {
+  FILE *fp = nullptr;
+  fopen_s(&fp, g_OneByOneIndexPath, "w");
+  if (!fp)
+    return;
+  fprintf(fp, "%zu\n", idx);
+  fclose(fp);
+}
+
+// Spawns a detached helper that waits ~2s for this process to die, then
+// relaunches Fable.exe from the game directory. Used by F2.
+void RelaunchGame() {
+  char cmd[1200];
+  sprintf_s(cmd,
+            "cmd.exe /c timeout /t 2 /nobreak >nul & start \"\" /D \"%s\" \"%s\"",
+            g_GameDir, g_FableExePath);
+  STARTUPINFOA si = {sizeof(si)};
+  PROCESS_INFORMATION pi = {};
+  if (CreateProcessA(nullptr, cmd, nullptr, nullptr, FALSE,
+                     CREATE_NO_WINDOW | DETACHED_PROCESS, nullptr, g_GameDir,
+                     &si, &pi)) {
+    CloseHandle(pi.hProcess);
+    CloseHandle(pi.hThread);
+  }
+}
+
+// Polls F1 (spawn current) and F2 (advance + restart game).
+DWORD WINAPI OneByOneHotkeyThread(LPVOID) {
+  bool f1was = false, f2was = false;
+  while (true) {
+    bool f1 = (GetAsyncKeyState(VK_F1) & 0x8000) != 0;
+    bool f2 = (GetAsyncKeyState(VK_F2) & 0x8000) != 0;
+
+    if (f1 && !f1was)
+      PostMessage(g_GameHwnd, WM_ONEBYONE_SPAWN, 0, 0);
+
+    if (f2 && !f2was) {
+      g_OneByOneIndex += 1;
+      WriteOneByOneIndex(g_OneByOneIndex);
+      if (g_OneByOneIndex < g_OneByOneList.size()) {
+        Log("[OneByOne] F2: advancing to index %zu (CDEF %lu) — restarting game.",
+            g_OneByOneIndex, g_OneByOneList[g_OneByOneIndex]);
+        RelaunchGame();
+      } else {
+        Log("[OneByOne] F2: end of list reached — closing without relaunch.");
+      }
+      Sleep(250);
+      ExitProcess(0);
+    }
+
+    f1was = f1;
+    f2was = f2;
+    Sleep(30);
+  }
+  return 0;
+}
+
+DWORD WINAPI OneByOneThread(LPVOID) {
+  ResolveModFlag();
+  g_OneByOneList = LoadCdefListFrom(g_OneByOneListPath);
+  if (g_OneByOneList.empty()) {
+    Log("[OneByOne] onebyone_list.txt empty — nothing to do.");
+    return 0;
+  }
+  g_OneByOneIndex = ReadOneByOneIndex();
+
+  while (!g_GameHwnd) {
+    EnumWindows(EnumWindowsProc, 0);
+    Sleep(100);
+  }
+  g_OriginalWndProc = reinterpret_cast<WNDPROC>(
+      SetWindowLongPtr(g_GameHwnd, GWLP_WNDPROC, reinterpret_cast<LONG_PTR>(GameWndProc)));
+
+  DWORD cur = g_OneByOneIndex < g_OneByOneList.size()
+                  ? g_OneByOneList[g_OneByOneIndex]
+                  : 0;
+  Log("[OneByOne] Ready. %zu CDEFs, cursor at index %zu (CDEF %lu). "
+      "Load a save, then F1 = spawn current, F2 = next + restart.",
+      g_OneByOneList.size(), g_OneByOneIndex, cur);
+
+  CreateThread(nullptr, 0, OneByOneHotkeyThread, nullptr, 0, nullptr);
+  return 0;
 }
 
 // ---------------------------------------------------------------------------
@@ -349,9 +492,32 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD reason, LPVOID) {
       *(lastSlash + 1) = '\0';
     sprintf_s(g_CdefListPath, "%sbatch_cdefs.txt", dir);
     sprintf_s(g_ResultsPath, "%sbatch_results.csv", dir);
+    sprintf_s(g_OneByOneListPath, "%sonebyone_list.txt", dir);
+    sprintf_s(g_OneByOneIndexPath, "%sonebyone_index.txt", dir);
 
-    Log("[BatchTest] Loaded. List=%s Results=%s", g_CdefListPath, g_ResultsPath);
-    CreateThread(nullptr, 0, BatchThread, nullptr, 0, nullptr);
+    // Derive the game root: dir is <FTLC>\mods\batch_test_mod\ — go up two levels.
+    strcpy_s(g_GameDir, dir);
+    for (int i = 0; i < 2; ++i) {
+      size_t n = strlen(g_GameDir);
+      if (n && g_GameDir[n - 1] == '\\')
+        g_GameDir[n - 1] = '\0'; // strip trailing backslash
+      char *s = strrchr(g_GameDir, '\\');
+      if (s)
+        *s = '\0'; // strip last component
+    }
+    sprintf_s(g_FableExePath, "%s\\Fable.exe", g_GameDir);
+
+    // One-by-one manual mode takes precedence when onebyone_list.txt exists.
+    FILE *probe = nullptr;
+    fopen_s(&probe, g_OneByOneListPath, "r");
+    if (probe) {
+      fclose(probe);
+      Log("[OneByOne] Enabled (found %s). GameDir=%s", g_OneByOneListPath, g_GameDir);
+      CreateThread(nullptr, 0, OneByOneThread, nullptr, 0, nullptr);
+    } else {
+      Log("[BatchTest] Loaded. List=%s Results=%s", g_CdefListPath, g_ResultsPath);
+      CreateThread(nullptr, 0, BatchThread, nullptr, 0, nullptr);
+    }
   }
   return TRUE;
 }

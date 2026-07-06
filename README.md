@@ -140,7 +140,39 @@ All 44 tested `ADDED_OK`, zero crashes. Trophy display names confirmed by screen
 
 Books 4551–4575: 4551=A Hero's Journey IV (new), and the `BOOK_GUILD_*` range (4555–4573) plus 4562/4564/4574/4575 map onto existing sheet book titles (The Arena, A Love Story, The Dragons, Book of Spells, Creatures of Albion I–III/North, The Guild of Zeroes, The Hierarchy of Weapons, The Northern Wastes, The Old Kingdom, The Other Land, The Pale Balverine, The Tale of Maxley, The Tale of Twinblade, Three Haikus, Theresa's Letter, The Bloodline) + new rows Seers and Prophets (4569). Sheet's "Three Haikus by Milo the Bard" shows in-game as "Miko" — spelling variant flagged.
 
-**Still unmapped from session 2** (tested `ADDED_OK`, not found in Books tab — likely Quest/Photo-Journal items): 4552/4553/4554 (`BOOK_STORY_14/15/16`), 4576 (`MAZE_JOURNAL`), 4577 (`HAUNTED_DIARY_01`).
+**Still unmapped from session 2** (tested `ADDED_OK`, not found in Books tab — likely Quest/Photo-Journal items): 4576 (`MAZE_JOURNAL`), 4577 (`HAUNTED_DIARY_01`).
+
+### Session 3: one-by-one (F1/F2) manual mode + a critical methodology finding
+
+Built an F1/F2 mode into `batch_test_mod` (`onebyone_list.txt` / `onebyone_index.txt` next to the DLL — presence of the list file enables this mode over the automatic batch mode). **F1** spawns the current CDEF into the loaded save; **F2** advances the cursor and relaunches `Fable.exe` automatically (spawns a detached `cmd.exe /c timeout /t 2 & start` helper so the mod's own process can exit cleanly first). The index persists across restarts, so a crash or manual relaunch resumes at the right CDEF.
+
+Used this to isolate the `BOOK_STORY_13-16` (4551-4554) cluster on **fresh game profiles** (one CDEF per profile — full disambiguation, no reliance on position or name). Result: **2 of 4 were wrong in the original session-2 batch reading**:
+
+| CDEF | Session-2 batch read (position-based) | **Session-3 clean isolated test (truth)** |
+|---|---|---|
+| 4551 | The Balverine Slayer | The Balverine Slayer ✓ (coincidentally right) |
+| 4552 | The Tailor's Tragedy | The Tailor's Tragedy ✓ (coincidentally right) |
+| 4553 | A Hero's Journey IV | **The Trigamist** ✗ |
+| 4554 | (assumed duplicate of 4551) | **A Hero's Journey IV** ✗ — there is no duplicate |
+
+**Why this happened:** the Books inventory UI does **not** display items in add-order — it uses fixed internal display slots (proven earlier: "The Dragons" sits above "Three Haikus" despite being added later). The `BOOK_STORY_01-12` block from session 1 only *happened* to read correctly because, by chance, add-order matched slot-order for that particular sub-range on that particular save. It is not a general rule.
+
+**Given that finding, all 12 `BOOK_STORY_01-12` books (4539-4550) were re-verified with the same clean single-CDEF-per-fresh-profile method** to make sure the session-1 batch reading wasn't similarly compromised. Result: **all 12 came back identical to the original session-1 reading** — that block was genuinely fine. Final confirmed book-symbol range 4539-4554, all clean-verified:
+
+| CDEF | Title | | CDEF | Title |
+|---|---|---|---|---|
+| 4539 | Sutter Family History | | 4547 | The Bargate Poems |
+| 4540 | The Repentant Alchemist | | 4548 | A Hero's Journey I |
+| 4541 | The Rotten Apple | | 4549 | The story of 'x' |
+| 4542 | A Hero's Journey II | | 4550 | The Guild Of Zeroes |
+| 4543 | Avo Nice Day | | 4551 | The Balverine Slayer |
+| 4544 | A Hero's Journey III | | 4552 | The Tailor's Tragedy |
+| 4545 | The Oakvale Raid | | 4553 | The Trigamist |
+| 4546 | The Trials Of Aarkan | | 4554 | A Hero's Journey IV |
+
+**Rule going forward: any CDEF-to-name mapping derived from *position* in a multi-item batch (not from a descriptive symbol name) must be treated as unverified until confirmed by an isolated single-CDEF test on a fresh profile.** Descriptive-symbol mappings (`GUILD_ARENA` → The Arena, `TROPHY_KRAKEN_TOOTH` → Kraken Tooth, etc.) don't have this problem since they don't depend on position at all.
+
+**Auto-name-logging investigation (abandoned for now):** attempted a cheap win — a memory probe (`ProbeStrings` in `batch_test_mod.cpp`, since removed) that walked a spawned CThing's memory 2 pointer-levels deep logging every readable string, run against a known CDEF (4553). Result: the display name is **not** stored on the object or reachable within that walk — it dumped plenty of internal engine/TC-class strings but no book titles. This means the display name is resolved on-demand at render time (likely `def_id → definition → text-ID → text.big` lookup), which isn't a quick win — would need the actual name-resolution function found via proper disassembly, not a memory walk. Parked; one-by-one (F1/F2) manual verification is the current best method for ambiguous items.
 
 ## Sheet sync
 
@@ -193,7 +225,9 @@ His intended workflow is still one ID at a time by hand (edit txt → F1 → eye
 
 - [x] Test trophies 4511–4527 — done session 2 (resolved White Balverine Head=4512, Map To Lost Bay=4525)
 - [x] Test books 4551–4577 — done session 2 (`BOOK_GUILD_*` map onto existing sheet titles as predicted)
-- [ ] Identify the 5 session-2 leftovers via isolated tests: 4552/4553/4554 (`BOOK_STORY_14/15/16`), 4576 (`MAZE_JOURNAL`), 4577 (`HAUNTED_DIARY_01`) — check Quest/Photo-Journal tabs
+- [x] Identify 4551-4554 (`BOOK_STORY_13-16`) via isolated one-by-one tests — done session 3, corrected 2 wrong batch-reads (see Session 3 writeup)
+- [ ] Identify 4576 (`MAZE_JOURNAL`), 4577 (`HAUNTED_DIARY_01`) via isolated tests — check Quest/Photo-Journal tabs
+- [ ] Re-verify any other position-derived (non-descriptive-symbol) mappings if found — descriptive-symbol mappings are considered reliable
 - [ ] Disambiguate the 4507 vs 4517 "Fist Fighters Trophy" duplicate
 - [ ] Clothing (`OBJECT_HERO_*` 3404–3519) — large range, sheet names won't match symbols; screenshot mapping needed
 - [ ] Tattoo/haircut/beard cards (4326–4427)
