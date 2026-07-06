@@ -452,7 +452,7 @@ Potion	Resurrection Phial
 Potion	Will Master's Elixir			
 Potion	Will Potion			
 Quest	Avisto's Tablet			
-Quest	Arban's Thaumaturgica			
+Quest	Arban's Thaumaturgica	4576	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_MAZE_JOURNAL.
 Quest	Bandit Bandana			
 Quest	Bandit Boots			
 Quest	Bandit Camp Pass			
@@ -463,7 +463,7 @@ Quest	Bandit Shirt
 Quest	Blue Mushroom			
 Quest	Calran's Tablet			
 Quest	Cooking Apple			
-Quest	Dusty Notebook			
+Quest	Dusty Notebook	4577	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_HAUNTED_DIARY_01.
 Quest	Fire Heart			
 Quest	Fist Fight Level 1 Passed			
 Quest	Fist Fight Level 2 Passed			

@@ -140,7 +140,7 @@ All 44 tested `ADDED_OK`, zero crashes. Trophy display names confirmed by screen
 
 Books 4551–4575: 4551=A Hero's Journey IV (new), and the `BOOK_GUILD_*` range (4555–4573) plus 4562/4564/4574/4575 map onto existing sheet book titles (The Arena, A Love Story, The Dragons, Book of Spells, Creatures of Albion I–III/North, The Guild of Zeroes, The Hierarchy of Weapons, The Northern Wastes, The Old Kingdom, The Other Land, The Pale Balverine, The Tale of Maxley, The Tale of Twinblade, Three Haikus, Theresa's Letter, The Bloodline) + new rows Seers and Prophets (4569). Sheet's "Three Haikus by Milo the Bard" shows in-game as "Miko" — spelling variant flagged.
 
-**Still unmapped from session 2** (tested `ADDED_OK`, not found in Books tab — likely Quest/Photo-Journal items): 4576 (`MAZE_JOURNAL`), 4577 (`HAUNTED_DIARY_01`).
+4576 (`MAZE_JOURNAL`) and 4577 (`HAUNTED_DIARY_01`) don't appear in Books despite the symbol names — resolved in session 3 (see below): they're Quest-category items, filling existing blank-CDEF sheet rows "Arban's Thaumaturgica" and "Dusty Notebook" respectively.
 
 ### Session 3: one-by-one (F1/F2) manual mode + a critical methodology finding
 
@@ -171,6 +171,8 @@ Used this to isolate the `BOOK_STORY_13-16` (4551-4554) cluster on **fresh game 
 | 4546 | The Trials Of Aarkan | | 4554 | A Hero's Journey IV |
 
 **Rule going forward: any CDEF-to-name mapping derived from *position* in a multi-item batch (not from a descriptive symbol name) must be treated as unverified until confirmed by an isolated single-CDEF test on a fresh profile.** Descriptive-symbol mappings (`GUILD_ARENA` → The Arena, `TROPHY_KRAKEN_TOOTH` → Kraken Tooth, etc.) don't have this problem since they don't depend on position at all.
+
+Also resolved via one-by-one: 4576 (`OBJECT_MAZE_JOURNAL`) = **Arban's Thaumaturgica** and 4577 (`OBJECT_HAUNTED_DIARY_01`) = **Dusty Notebook** — both Quest-category items despite book-like symbol names, filling existing blank-CDEF sheet rows. This closes out every CDEF from sessions 2 and 3 (4495-4577) with no remaining unknowns.
 
 **Auto-name-logging investigation (abandoned for now):** attempted a cheap win — a memory probe (`ProbeStrings` in `batch_test_mod.cpp`, since removed) that walked a spawned CThing's memory 2 pointer-levels deep logging every readable string, run against a known CDEF (4553). Result: the display name is **not** stored on the object or reachable within that walk — it dumped plenty of internal engine/TC-class strings but no book titles. This means the display name is resolved on-demand at render time (likely `def_id → definition → text-ID → text.big` lookup), which isn't a quick win — would need the actual name-resolution function found via proper disassembly, not a memory walk. Parked; one-by-one (F1/F2) manual verification is the current best method for ambiguous items.
 
@@ -226,8 +228,8 @@ His intended workflow is still one ID at a time by hand (edit txt → F1 → eye
 - [x] Test trophies 4511–4527 — done session 2 (resolved White Balverine Head=4512, Map To Lost Bay=4525)
 - [x] Test books 4551–4577 — done session 2 (`BOOK_GUILD_*` map onto existing sheet titles as predicted)
 - [x] Identify 4551-4554 (`BOOK_STORY_13-16`) via isolated one-by-one tests — done session 3, corrected 2 wrong batch-reads (see Session 3 writeup)
-- [ ] Identify 4576 (`MAZE_JOURNAL`), 4577 (`HAUNTED_DIARY_01`) via isolated tests — check Quest/Photo-Journal tabs
-- [ ] Re-verify any other position-derived (non-descriptive-symbol) mappings if found — descriptive-symbol mappings are considered reliable
+- [x] Identify 4576 (`MAZE_JOURNAL`) = Arban's Thaumaturgica, 4577 (`HAUNTED_DIARY_01`) = Dusty Notebook — done session 3
+- [ ] Re-verify any other position-derived (non-descriptive-symbol) mappings if found — descriptive-symbol mappings are considered reliable. The entire 4495-4577 range is now fully clean-verified with no gaps.
 - [ ] Disambiguate the 4507 vs 4517 "Fist Fighters Trophy" duplicate
 - [ ] Clothing (`OBJECT_HERO_*` 3404–3519) — large range, sheet names won't match symbols; screenshot mapping needed
 - [ ] Tattoo/haircut/beard cards (4326–4427)
