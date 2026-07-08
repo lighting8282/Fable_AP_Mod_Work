@@ -575,24 +575,31 @@ Spell	Progressive Turncoat 1
 Spell	Progressive Turncoat 2			
 Spell	Progressive Turncoat 3			
 Spell	Maximum Turncoat			
-Style	Big Beard			
-Style	Foreign Moustache			
-Style	Mutton Chop Beard			
-Style	Normal Beard			
-Style	Normal Haircut			
-Style	Plaits			
-Style	Ponytail			
-Style	Power Moustache			
-Style	Short Hair			
-Style	Small Moustache			
-Style	Standard Beard			
-Style	Strip Beard			
-Style	The Buzz			
-Style	The Pudding Basin			
-Style	Trader Style Moustache			
-Style	Tramp Beard			
-Style	Working Moustache			
-Style	Youngster Style			
+Style	Big Beard	4343	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item).
+Style	Foreign Moustache	4349	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item).
+Style	Mutton Chop Beard	4338	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item).
+Style	Normal Beard	4335	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item).
+Style	Normal Haircut	4326	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item).
+Style	Plaits	4333	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item).
+Style	Ponytail	4330	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item).
+Style	Power Moustache	4347	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item).
+Style	Short Hair	4328	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item).
+Style	Small Moustache	4350	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item).
+Style	Standard Beard	4336	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item).
+Style	Strip Beard	4341	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item).
+Style	The Buzz	4327	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item).
+Style	The Pudding Basin	4329	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item).
+Style	Trader Style Moustache	4346	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item).
+Style	Tramp Beard	4342	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item).
+Style	Working Moustache	4345	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item).
+Style	Youngster Style	4331	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item).
+Style	The Warrior Stripe	4332	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item). Not previously on sheet.
+Style	Bald	4334	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item). Not previously on sheet.
+Style	Regular Beard	4337	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item). Not previously on sheet.
+Style	Long Beard	4339	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item). Not previously on sheet.
+Style	Chin Beard	4340	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item). Not previously on sheet.
+Style	Clean Shave	4344	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item). Not previously on sheet.
+Style	Sheriff Moustache	4348	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item). Not previously on sheet.
 Tattoo	Arrowhead			
 Tattoo	Autumn Leaves			
 Tattoo	Big Blue Box, Chest			
