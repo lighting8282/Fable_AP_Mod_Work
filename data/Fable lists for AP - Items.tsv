@@ -602,15 +602,15 @@ Style	Clean Shave	4344	Yes	Confirmed via clean single-CDEF isolated test (fresh 
 Style	Sheriff Moustache	4348	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item). Not previously on sheet.
 Tattoo	Arrowhead	4382	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item).
 Tattoo	Autumn Leaves	4370	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item).
-Tattoo	Big Blue Box, Chest			
-Tattoo	Big Blue Box, Back			
+Tattoo	Big Blue Box, Chest	4411	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item).
+Tattoo	Big Blue Box, Back	4412	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item).
 Tattoo	Coron Birth	4388	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item).
 Tattoo	Coron Night	4379	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item).
 Tattoo	Coron Visor	4385	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item).
 Tattoo	Dark Vortex	4352	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item).
 Tattoo	Deathlicon	4359	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item).
 Tattoo	Dorgon	4399	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item).
-Tattoo	Dragon			
+Tattoo	Dragon	4416	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item).
 Tattoo	Eyes Of Skorm	4377	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item).
 Tattoo	Eyes Of Avo	4376	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item).
 Tattoo	Fire Monkey	4372	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item).
@@ -619,21 +619,21 @@ Tattoo	Furite Deathhead, Chest
 Tattoo	Furite Deathhead, Back	4401	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item).
 Tattoo	Furite Flame, Back	4402	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item).
 Tattoo	Furite Flame, Chest			
-Tattoo	Furite Flash			
-Tattoo	Furite Funeral			
+Tattoo	Furite Flash	4410	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item).
+Tattoo	Furite Funeral	4409	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item).
 Tattoo	Furite Swirl	4396	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item).
-Tattoo	Furite War			
+Tattoo	Furite War	4406	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item).
 Tattoo	Golden Harvest	4374	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item).
 Tattoo	Gryphonite	4395	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item).
 Tattoo	Harion, Arm	4364	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item).
 Tattoo	Harion, Shoulder	4360	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item).
 Tattoo	Harvest	4373	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item).
-Tattoo	Howl			
+Tattoo	Howl	4407	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item).
 Tattoo	Karlan Wings	4354	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item).
 Tattoo	Kryndon	4391	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item).
-Tattoo	Lionhead, Back			
-Tattoo	Lionhead, Chest			
-Tattoo	Poison Web			
+Tattoo	Lionhead, Back	4414	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item).
+Tattoo	Lionhead, Chest	4413	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item).
+Tattoo	Poison Web	4405	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item).
 Tattoo	Seachaos, Arm	4363	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item).
 Tattoo	Seacorpse	4384	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item).
 Tattoo	Somrune	4371	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item).
@@ -663,6 +663,8 @@ Tattoo	Furite Deathhead, Chest (verify)	4397	Yes	Confirmed via clean single-CDEF
 Tattoo	Furite Flame, Stomach	4398	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item). Not previously on sheet (sheet has Furite Flame Chest/Back only).
 Tattoo	Furite Swirl, Back	4400	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item). Second Furite Swirl variant; 4396 is the torso version matched to the sheet's single 'Furite Swirl' row - sheet may need splitting.
 Tattoo	Red Widow	4403	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item). Not previously on sheet.
+Tattoo	Furite Stripe, Face	4408	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item). Not previously on sheet.
+Tattoo	Balverine	4415	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item). Not previously on sheet; distinct from 'Balverine Skull Tattoo' (4353).
 Tool	Fishing Rod			
 Tool	Guild Seal			
 Tool	Lamp			
