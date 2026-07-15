@@ -665,6 +665,18 @@ Tattoo	Furite Swirl, Back	4400	Yes	Confirmed via clean single-CDEF isolated test
 Tattoo	Red Widow	4403	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item). Not previously on sheet.
 Tattoo	Furite Stripe, Face	4408	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item). Not previously on sheet.
 Tattoo	Balverine	4415	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item). Not previously on sheet; distinct from 'Balverine Skull Tattoo' (4353).
+Tattoo	Snowspire Slinger	4417	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item). Not previously on sheet.
+Tattoo	Snowspire Commander	4418	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item). Not previously on sheet.
+Tattoo	Snowspire Swordsman	4419	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item). Not previously on sheet.
+Tattoo	Snowspire Spearsman	4420	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item). Not previously on sheet.
+Tattoo	Snowspire Axeman	4421	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item). Not previously on sheet.
+Tattoo	Snowspire Archer	4422	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item). Not previously on sheet.
+Tattoo	Snowspire Crossbowman	4423	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item). Not previously on sheet.
+Tattoo	Snowspire General	4424	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item). Not previously on sheet.
+Tattoo	Snowspire Blacksmith	4425	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item). Not previously on sheet.
+Tattoo	Snowspire Guard	4426	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item). Not previously on sheet.
+Tattoo	Snowspire Innkeeper	4427	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Applies appearance directly (not a held item). Not previously on sheet.
+Tattoo	(unusable - crashes)	4617	No	OBJECT_TATTOO_CARD_01: CRASHES the game on AddItemToInventory (isolated test). Same failure class as gold CDEFs - cannot be granted via this path.
 Tool	Fishing Rod			
 Tool	Guild Seal			
 Tool	Lamp			
