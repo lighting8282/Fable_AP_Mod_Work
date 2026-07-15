@@ -29,6 +29,15 @@ One CDEF + one fresh profile removes all of that ambiguity — whatever single i
 - **Not everything is a normal inventory item.** Gold, haircuts, beards, tattoos etc. apply an effect directly (hairstyle changes, stat changes) rather than becoming a held item — `AddItemToInventory` may return "rejected" for these even though the effect clearly happened. Check Hero Status / appearance screens, not just Inventory, when nothing shows up there.
 - **Check all tabs**, not just the one you expect: Inventory, Trophies, Books, Items: Other, Quest, Photo Journal.
 - Some CDEFs are accepted by the engine but never appear anywhere (non-holdable internal tokens) — that's a valid, useful result too.
+- **Some CDEFs crash the game outright** when added. Known crashing sets: gold (`OBJECT_GOLD_*`), `OBJECT_TATTOO_CARD_01` (4617), and the **entire `OBJECT_HERO_*` clothing range (3404–3519)**. A crash is itself a valid result — it means that item needs a different grant mechanism, not `AddItemToInventory`.
+
+## Known blocker: clothing
+
+The sheet lists ~190 clothing items, but the OBJECT tree only contains:
+- `OBJECT_HERO_*` (3404–3519) — **crashes on add**; confirmed with both the base template (3404 `OBJECT_HERO_BOOTS`) and a named variant (3422 `OBJECT_HERO_BOOTS_CHAINMAIL`). These appear to be worn-appearance model parts, not carryable items.
+- `OBJECT_CLOTHING_*` (3348–3352) — only 5 generic templates (footwear/trousers/shirt/gloves/hat).
+
+Neither gives us per-item clothing CDEFs. The real ones may live in a FESN def section that was never scraped (only `OBJECT` was). **Investigate that before attempting clothing again** — don't grind the `HERO_*` range, it just crashes.
 
 ## Sheet sync
 
@@ -48,4 +57,10 @@ We work in a personal copy of the shared Google Sheet, not the shared one direct
 
 ## Next up
 
-Continuing one-by-one through: haircut/beard/tash/tattoo cards (4326–4427), then clothing (`OBJECT_HERO_*` 3404–3519), then remaining quest items/gifts/weapons not yet mapped. Also still open: find the direct gold-stat function (gold CDEFs aren't real inventory items), and decide whether to merge into the shared Google Sheet.
+**Done:** trophies (4495–4527), books (4539–4577), haircut/beard/moustache cards (4326–4350), tattoo cards (4351–4427 + 4617-crashes). ~172 CDEFs mapped.
+
+**Blocked:** clothing — see "Known blocker" above; need to locate the real clothing defs first.
+
+**Next up:** weapons (`OBJECT_IRON_*`/`OBJECT_STEEL_*`/etc., ~5474–5636), gifts, tools, and remaining quest items.
+
+**Also open:** find the direct gold-stat grant function; reconcile a few fuzzy tattoo spellings flagged `VERIFY` in the TSV; decide whether to merge into the shared Google Sheet.
