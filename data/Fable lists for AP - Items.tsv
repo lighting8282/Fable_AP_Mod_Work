@@ -238,6 +238,8 @@ Clothing	Will User's Boots
 Clothing	Will User's Bright Boots			
 Clothing	Will User's Bright Gloves			
 Clothing	Will User's Gloves			
+Clothing	(range note - see comment)	3404	No	CRASHES the game on AddItemToInventory (isolated test). The whole OBJECT_HERO_* range (3404-3519) appears to be worn-appearance objects, not carryable items - cannot be granted via this path. Confirmed with both the base template (3404 OBJECT_HERO_BOOTS) and a named variant (3422 OBJECT_HERO_BOOTS_CHAINMAIL). Clothing needs a different grant mechanism, like gold.
+Clothing	(range note - see comment)	3422	No	CRASHES the game on AddItemToInventory (isolated test). The whole OBJECT_HERO_* range (3404-3519) appears to be worn-appearance objects, not carryable items - cannot be granted via this path. Confirmed with both the base template (3404 OBJECT_HERO_BOOTS) and a named variant (3422 OBJECT_HERO_BOOTS_CHAINMAIL). Clothing needs a different grant mechanism, like gold.
 Emote	Apologise			
 Emote	Air Guitar			
 Emote	Avisto			
