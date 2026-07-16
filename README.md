@@ -64,8 +64,8 @@ We work in a personal copy of the shared Google Sheet, not the shared one direct
 
 **Done:** trophies (4495–4527), books (4539–4577), haircut/beard/moustache cards (4326–4350), tattoo cards (4351–4427 + 4617-crashes). ~172 CDEFs mapped.
 
-**Blocked:** clothing — see "Known blocker" above; need to locate the real clothing defs first.
+**Blocked (crash `AddItemToInventory`, need dedicated grant paths):** weapons (~5474–5636), clothing (`OBJECT_HERO_*` 3404–3519), gold. See the crash-classes note above.
 
-**Next up:** weapons (`OBJECT_IRON_*`/`OBJECT_STEEL_*`/etc., ~5474–5636), gifts, tools, and remaining quest items.
+**Next up (carried items that should add cleanly):** gifts (gems, roses, chocolates, rings), tools (fishing rod, lamp, spade, etc.), misc (dolls, relics), and remaining quest items not yet mapped.
 
-**Also open:** find the direct gold-stat grant function; reconcile a few fuzzy tattoo spellings flagged `VERIFY` in the TSV; decide whether to merge into the shared Google Sheet.
+**Also open:** find the equip-weapon / wear-clothing / give-gold functions to unblock those categories (deeper RE, or ask the creator); reconcile a few fuzzy tattoo spellings flagged `VERIFY` in the TSV; decide whether to merge into the shared Google Sheet.
