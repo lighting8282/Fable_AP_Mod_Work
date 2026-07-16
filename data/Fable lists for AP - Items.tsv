@@ -282,19 +282,19 @@ Food	Green Apple
 Food	Moonfish			
 Food	Red Meat			
 Food	Tofu			
-Gift	Amethyst			
-Gift	Black Rose			
-Gift	Chocolates			
-Gift	Diamond			
-Gift	Emerald			
-Gift	Fake Wedding Ring			
-Gift	Jet			
-Gift	Perfume			
-Gift	Red Rose			
-Gift	Ruby			
-Gift	Sapphire			
-Gift	Teddy Bear			
-Gift	Wedding Ring			
+Gift	Amethyst	4440	Yes	Confirmed via clean single-CDEF isolated test (fresh profile).
+Gift	Black Rose	5129	Yes	Confirmed via clean single-CDEF isolated test (fresh profile).
+Gift	Chocolates	4317	Yes	Confirmed via clean single-CDEF isolated test (fresh profile).
+Gift	Diamond	4441	Yes	Confirmed via clean single-CDEF isolated test (fresh profile).
+Gift	Emerald	4442	Yes	Confirmed via clean single-CDEF isolated test (fresh profile).
+Gift	Fake Wedding Ring	4319	Yes	Confirmed via clean single-CDEF isolated test (fresh profile).
+Gift	Jet	4445	Yes	Confirmed via clean single-CDEF isolated test (fresh profile).
+Gift	Perfume	4314	Yes	Confirmed via clean single-CDEF isolated test (fresh profile).
+Gift	Red Rose	4315	Yes	Confirmed via clean single-CDEF isolated test (fresh profile).
+Gift	Ruby	4443	Yes	Confirmed via clean single-CDEF isolated test (fresh profile).
+Gift	Sapphire	4444	Yes	Confirmed via clean single-CDEF isolated test (fresh profile).
+Gift	Teddy Bear	5131	Yes	Confirmed via clean single-CDEF isolated test (fresh profile).
+Gift	Wedding Ring	4318	Yes	Confirmed via clean single-CDEF isolated test (fresh profile).
 Gold	1 Gold			
 Gold	5 Gold			
 Gold	20 Gold			
