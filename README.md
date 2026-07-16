@@ -29,7 +29,12 @@ One CDEF + one fresh profile removes all of that ambiguity — whatever single i
 - **Not everything is a normal inventory item.** Gold, haircuts, beards, tattoos etc. apply an effect directly (hairstyle changes, stat changes) rather than becoming a held item — `AddItemToInventory` may return "rejected" for these even though the effect clearly happened. Check Hero Status / appearance screens, not just Inventory, when nothing shows up there.
 - **Check all tabs**, not just the one you expect: Inventory, Trophies, Books, Items: Other, Quest, Photo Journal.
 - Some CDEFs are accepted by the engine but never appear anywhere (non-holdable internal tokens) — that's a valid, useful result too.
-- **Some CDEFs crash the game outright** when added. Known crashing sets: gold (`OBJECT_GOLD_*`), `OBJECT_TATTOO_CARD_01` (4617), and the **entire `OBJECT_HERO_*` clothing range (3404–3519)**. A crash is itself a valid result — it means that item needs a different grant mechanism, not `AddItemToInventory`.
+- **Some CDEFs crash `AddItemToInventory` (0x005BF654).** The item *creates* fine (`CreateThing` succeeds) but the inventory-add itself faults. Known crashing classes — all things that need special handling the generic add doesn't do:
+  - **Gold** (`OBJECT_GOLD_*`) — a stat counter, not a carried item.
+  - **Weapons** (`OBJECT_IRON_*`/`STEEL_*`/`EBONY_*`/`CRYSTAL_*`/`LEGENDARY_*` swords/axes/bows, ~5474+) — equipped items.
+  - **Clothing** (`OBJECT_HERO_*` 3404–3519) — worn-appearance parts.
+  - `OBJECT_TATTOO_CARD_01` (4617).
+  Verified thorough for weapons: crashes on both a fresh **kid** profile and an **adult** save, with `quick_access` true *and* false, `silent` true *and* false, and with the **creator's own prebuilt `add_item_mod`** (not just ours). So it is not our method — it's the function. These categories each need a dedicated grant path (give-gold, equip-weapon, wear-clothing), which we have not located.
 
 ## Known blocker: clothing
 

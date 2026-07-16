@@ -423,6 +423,7 @@ Melee	Undead Axe
 Melee	Wardog's Sword			
 Melee	Weapon Of The Damned			
 Melee	Wellow's Pickhammer			
+Melee	(weapon range note - see comment)	5474	No	CRASHES AddItemToInventory (item creates OK, add faults). Tested 5474 IRON_LONGSWORD: crashes on kid AND adult save, quick_access true/false, silent true/false, and with the creator's own prebuilt add_item_mod. The whole weapon range (~5474-5636 swords/axes/bows) needs an equip-weapon grant path, not AddItemToInventory.
 Misc	Beer Keg			
 Misc	Briar Rose Hero Doll			
 Misc	Cider Crate			
