@@ -425,18 +425,18 @@ Melee	Weapon Of The Damned
 Melee	Wellow's Pickhammer			
 Melee	(weapon range note - see comment)	5474	No	CRASHES AddItemToInventory (item creates OK, add faults). Tested 5474 IRON_LONGSWORD: crashes on kid AND adult save, quick_access true/false, silent true/false, and with the creator's own prebuilt add_item_mod. The whole weapon range (~5474-5636 swords/axes/bows) needs an equip-weapon grant path, not AddItemToInventory.
 Misc	Beer Keg			
-Misc	Briar Rose Hero Doll			
+Misc	Briar Rose Hero Doll	4458	Yes	Confirmed via clean single-CDEF isolated test (fresh profile).
 Misc	Cider Crate			
 Misc	Demon Relic			
 Misc	Flour Sack			
 Misc	Grain Sack			
-Misc	Jack Hero Doll			
+Misc	Jack Hero Doll	4460	Yes	Confirmed via clean single-CDEF isolated test (fresh profile).
 Misc	Rock Of Necrilia			
 Misc	Skorm's Tear			
 Misc	Slab Of Jeroen			
 Misc	Tablet Of Torment			
-Misc	Thunder Hero Doll			
-Misc	Doll Of You			
+Misc	Thunder Hero Doll	4464	Yes	Confirmed via clean single-CDEF isolated test (fresh profile).
+Misc	Doll Of You	4459	Yes	Confirmed via clean single-CDEF isolated test (fresh profile).
 Misc	Fist Fight Level 4 Passed			
 Misc	Flame Augmentation			
 Misc	Experience Augmentation			
@@ -446,6 +446,11 @@ Misc	Mana Augmentation
 Misc	Piercing Augmentation			
 Misc	Silver Augmentation			
 Misc	Sharpening Augmentation			
+Misc	Maze Hero Doll	4461	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Not previously on sheet.
+Misc	Scarlet Robe Hero Doll	4462	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Not previously on sheet.
+Misc	Scythe Hero Doll	4463	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Not previously on sheet.
+Misc	Twinblade Hero Doll	4465	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Not previously on sheet.
+Misc	Whisper Hero Doll	4466	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Not previously on sheet.
 Potion	Ages Of Might Potion			
 Potion	Ages Of Skill Potion			
 Potion	Ages Of Will Potion			
