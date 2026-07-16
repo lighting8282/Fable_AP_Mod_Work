@@ -424,20 +424,20 @@ Melee	Wardog's Sword
 Melee	Weapon Of The Damned			
 Melee	Wellow's Pickhammer			
 Melee	(weapon range note - see comment)	5474	No	CRASHES AddItemToInventory (item creates OK, add faults). Tested 5474 IRON_LONGSWORD: crashes on kid AND adult save, quick_access true/false, silent true/false, and with the creator's own prebuilt add_item_mod. The whole weapon range (~5474-5636 swords/axes/bows) needs an equip-weapon grant path, not AddItemToInventory.
-Misc	Beer Keg			
+Misc	Beer Keg	4448	Yes	Confirmed via clean single-CDEF isolated test (fresh profile).
 Misc	Briar Rose Hero Doll	4458	Yes	Confirmed via clean single-CDEF isolated test (fresh profile).
-Misc	Cider Crate			
-Misc	Demon Relic			
-Misc	Flour Sack			
-Misc	Grain Sack			
+Misc	Cider Crate	4450	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_LIQUOR_CRATE.
+Misc	Demon Relic			No matching CDEF in scraped OBJECT tree - likely a quest token/flag or in an unscraped FESN def section. Not testable via current method.
+Misc	Flour Sack	4447	Yes	Confirmed via clean single-CDEF isolated test (fresh profile).
+Misc	Grain Sack	4446	Yes	Confirmed via clean single-CDEF isolated test (fresh profile).
 Misc	Jack Hero Doll	4460	Yes	Confirmed via clean single-CDEF isolated test (fresh profile).
-Misc	Rock Of Necrilia			
-Misc	Skorm's Tear			
-Misc	Slab Of Jeroen			
-Misc	Tablet Of Torment			
+Misc	Rock Of Necrilia			No matching CDEF in scraped OBJECT tree - likely a quest token/flag or in an unscraped FESN def section. Not testable via current method.
+Misc	Skorm's Tear			No matching CDEF in scraped OBJECT tree - likely a quest token/flag or in an unscraped FESN def section. Not testable via current method.
+Misc	Slab Of Jeroen			No matching CDEF in scraped OBJECT tree - likely a quest token/flag or in an unscraped FESN def section. Not testable via current method.
+Misc	Tablet Of Torment			No matching CDEF in scraped OBJECT tree - likely a quest token/flag or in an unscraped FESN def section. Not testable via current method.
 Misc	Thunder Hero Doll	4464	Yes	Confirmed via clean single-CDEF isolated test (fresh profile).
 Misc	Doll Of You	4459	Yes	Confirmed via clean single-CDEF isolated test (fresh profile).
-Misc	Fist Fight Level 4 Passed			
+Misc	Fist Fight Level 4 Passed			No matching CDEF in scraped OBJECT tree - likely a quest token/flag or in an unscraped FESN def section. Not testable via current method.
 Misc	Flame Augmentation	2880	No	CDEF confirmed by symbol; CRASHES AddItemToInventory (item creates, add faults). Name symbol-inferred, not visually confirmed. Augmentations need an apply-to-weapon path.
 Misc	Experience Augmentation	2883	No	CDEF confirmed by symbol; CRASHES AddItemToInventory (item creates, add faults). Name symbol-inferred, not visually confirmed. Augmentations need an apply-to-weapon path.
 Misc	Health Augmentation	2884	No	CDEF confirmed (symbol OBJECT_HEALTH_AUGMENTATION); CRASHES AddItemToInventory (item creates, add faults). Name symbol-inferred, not visually confirmed. Augmentations need an apply-to-weapon path.
