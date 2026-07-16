@@ -465,7 +465,7 @@ Quest	Avisto's Tablet
 Quest	Arban's Thaumaturgica	4576	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_MAZE_JOURNAL.
 Quest	Bandit Bandana			
 Quest	Bandit Boots			
-Quest	Bandit Camp Pass			
+Quest	Bandit Camp Pass	4531	Yes	Confirmed via clean single-CDEF isolated test (fresh profile).
 Quest	Bandit Gloves			
 Quest	Bandit Trousers			
 Quest	Bandit Seal			
@@ -478,25 +478,25 @@ Quest	Fire Heart
 Quest	Fist Fight Level 1 Passed			
 Quest	Fist Fight Level 2 Passed			
 Quest	Fist Fight Level 3 Passed			
-Quest	Hexagon Key			
-Quest	Key To Hostage Cage			
+Quest	Hexagon Key	5126	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_HEXAGON_DOOR_KEY.
+Quest	Key To Hostage Cage	5105	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_BANDIT_CAMP_HOSTAGE_KEY.
 Quest	Moryk's Tablet			
 Quest	Nostro's Armor			
 Quest	Nostro's Helmet			
 Quest	Nostro's Shield			
 Quest	Nostro's Sword			
-Quest	Prison Cell Key			
+Quest	Prison Cell Key	5102	Yes	Confirmed via clean single-CDEF isolated test (fresh profile).
 Quest	Letter From Cyril			
 Quest	Reply From Myra			
 Quest	Letter From Myra			
-Quest	Silver Key			
+Quest	Silver Key	4313	Yes	Confirmed via clean single-CDEF isolated test (fresh profile).
 Quest	Scrawled Parchment			
-Quest	Treasure Clue 1			
-Quest	Treasure Clue 2			
-Quest	Treasure Clue 3			
-Quest	Treasure Clue 4			
-Quest	Treasure Clue 5			
-Quest	Treasure Clue 6			
+Quest	Treasure Clue 1	4473	Yes	Confirmed via clean single-CDEF isolated test (fresh profile).
+Quest	Treasure Clue 2	4474	Yes	Confirmed via clean single-CDEF isolated test (fresh profile).
+Quest	Treasure Clue 3	4475	Yes	CDEF from exact symbol match (OBJECT_TREASURE_CLUE_N); pattern confirmed on clues 1-2, rest filled by symbol.
+Quest	Treasure Clue 4	4476	Yes	CDEF from exact symbol match (OBJECT_TREASURE_CLUE_N); pattern confirmed on clues 1-2, rest filled by symbol.
+Quest	Treasure Clue 5	4477	Yes	CDEF from exact symbol match (OBJECT_TREASURE_CLUE_N); pattern confirmed on clues 1-2, rest filled by symbol.
+Quest	Treasure Clue 6	4478	Yes	CDEF from exact symbol match (OBJECT_TREASURE_CLUE_N); pattern confirmed on clues 1-2, rest filled by symbol.
 Quest	Witch's Potion			
 Quest	Yeron's Tablet			
 Ranged	Apollo's Crossbow			
