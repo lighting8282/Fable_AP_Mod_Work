@@ -727,3 +727,11 @@ Trophy	Scorpion Sting	4518	Yes	Not previously on sheet; confirmed in-game; disti
 Trophy	Dragon Scale	4511	Yes	Not previously on sheet; confirmed in-game (Trophies tab)
 Trophy	Jack's Mask	4523	Yes	Symbol OBJECT_TROPHY_JOB_MASK_01; shows in 'Items: Other' inventory tab in-game, not Trophies; not previously on sheet
 Trophy	Dragon Gate	4524	No	OBJECT_TROPHY_DRAGON_GATE_01; mod AddItemToInventory returned OK but item NOT visible in any inventory tab in-game -- likely internal/non-holdable token
+Potion	Adrenaline Potion (BONUS - not on original sheet)	4299	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_ADRENALINE_POTION. Adds cleanly. NOT on the original sheet - a valid bonus item discovered via item-band gap sweep.
+Trophy	Balverine Pelt (BONUS - not on original sheet)	4451	Yes	Confirmed via clean single-CDEF isolated test. Symbol OBJECT_BALVERINE_CLAW (displays as 'Balverine Pelt'). Creature trade-drop; 4451-4457 are a trade-goods cluster absent from the sheet.
+Trophy	Nymph Wings (BONUS - not on original sheet)	4452	Yes	Confirmed via clean single-CDEF isolated test. Symbol OBJECT_NYMPH_WINGS. Creature trade-drop cluster 4451-4457.
+Trophy	Troll Lump (BONUS - not on original sheet)	4453	Yes	Confirmed via clean single-CDEF isolated test. Symbol OBJECT_TROLL_LUMP. Creature trade-drop cluster 4451-4457.
+Trophy	Bandit Ears (BONUS - not on original sheet)	4454	Yes	Confirmed via clean single-CDEF isolated test. Symbol OBJECT_BANDIT_EARS. Creature trade-drop cluster 4451-4457.
+Trophy	Wasp Sting (BONUS - not on original sheet)	4455	Yes	Confirmed via clean single-CDEF isolated test. Symbol OBJECT_WASP_STING. Creature trade-drop cluster 4451-4457.
+Trophy	Skeleton Bones (BONUS - not on original sheet)	4456	Yes	Confirmed via clean single-CDEF isolated test. Symbol OBJECT_SKELETON_BONES. Creature trade-drop cluster 4451-4457.
+Trophy	Hobbes Teeth (BONUS - not on original sheet)	4457	Yes	Confirmed via clean single-CDEF isolated test. Symbol OBJECT_HOBBES_TEETH. Creature trade-drop cluster 4451-4457 (7 items: Balverine Pelt, Nymph Wings, Troll Lump, Bandit Ears, Wasp Sting, Skeleton Bones, Hobbes Teeth). Note 4493 OBJECT_HOBBE_TEETH_BAG is separate.
