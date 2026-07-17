@@ -9,9 +9,9 @@ Book	Creatures Of Albion Book I	4556	Yes	Re-verified individually via clean sing
 Book	Creatures Of Albion Book II	4557	Yes	Re-verified individually via clean single-CDEF test (full Book sweep); confirmed correct.
 Book	Creatures Of Albion Book III	4558	Yes	Re-verified individually via clean single-CDEF test (full Book sweep); confirmed correct.
 Book	Creatures Of The North	4559	Yes	Re-verified individually via clean single-CDEF test (full Book sweep); confirmed correct.
-Book	Eyes Of A Killer			
+Book	Eyes Of A Killer	4322	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_BOOK_RAISE_SCARINESS. In-game shows 'The Eyes of a Killer'.
 Book	Jack Of Blades	4563	Yes	Re-verified individually via clean single-CDEF test (full Book sweep); confirmed correct.
-Book	Making Friends			
+Book	Making Friends	4321	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_BOOK_RAISE_AGREEABILITY.
 Book	The Arena	4555	Yes	Re-verified individually via clean single-CDEF test (full Book sweep); confirmed correct.
 Book	The Dragons	4560	Yes	Re-verified individually via clean single-CDEF test (full Book sweep); confirmed correct.
 Book	The Guild Of Zeroes	4550	Yes	Confirmed via clean single-CDEF isolated test (fresh profile) Re-verified individually via clean single-CDEF test (full Book sweep); confirmed correct.
@@ -22,16 +22,16 @@ Book	The Old Kingdom	4567	Yes	Re-verified individually via clean single-CDEF tes
 Book	The Other Land	4568	Yes	Re-verified individually via clean single-CDEF test (full Book sweep); confirmed correct.
 Book	The Pale Balverine	4573	Yes	Re-verified individually via clean single-CDEF test (full Book sweep); confirmed correct.
 Book	The Repentant Alchemist	4540	Yes	Confirmed via clean single-CDEF isolated test (fresh profile) Re-verified individually via clean single-CDEF test (full Book sweep); confirmed correct.
-Book	The Sock Method			
+Book	The Sock Method	4320	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_BOOK_RAISE_SEXINESS - the 6 'self-help' books hide in the 4320-4325 BOOK_RAISE/REDUCE cluster, not the BOOK_STORY/GUILD range.
 Book	The Tailor's Tragedy	4552	Yes	Confirmed via clean single-CDEF isolated test (fresh profile) (BOOK_STORY_14) Re-verified individually via clean single-CDEF test (full Book sweep); confirmed correct.
 Book	The Tale Of Maxley	4565	Yes	Re-verified individually via clean single-CDEF test (full Book sweep); confirmed correct.
 Book	The Tale Of Twinblade	4571	Yes	Re-verified individually via clean single-CDEF test (full Book sweep); confirmed correct.
 Book	The Trials Of Aarkan	4546	Yes	Confirmed via clean single-CDEF isolated test (fresh profile) Re-verified individually via clean single-CDEF test (full Book sweep); confirmed correct.
 Book	The Trigamist	4553	Yes	Confirmed via clean single-CDEF isolated test (fresh profile) (BOOK_STORY_15) Re-verified individually via clean single-CDEF test (full Book sweep); confirmed correct.
-Book	The Ugly Guide			
+Book	The Ugly Guide	4323	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_BOOK_REDUCE_SEXINESS.
 Book	Three Haikus by Milo the Bard	4561	Yes	In-game shows as 'Three Haikus by Miko the Bard' -- sheet has 'Milo', likely a spelling variant/typo somewhere Re-verified individually via clean single-CDEF test (full Book sweep); confirmed correct.
-Book	Windbreaker Rule Book			
-Book	You Are Not a Bad Person			
+Book	Windbreaker Rule Book	4324	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_BOOK_REDUCE_AGREEABILITY.
+Book	You Are Not a Bad Person	4325	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_BOOK_REDUCE_SCARINESS.
 Book	The Rotten Apple	4541	Yes	Confirmed via clean single-CDEF isolated test (fresh profile) Re-verified individually via clean single-CDEF test (full Book sweep); confirmed correct.
 Book	Sutter Family History	4539	Yes	Confirmed via clean single-CDEF isolated test (fresh profile) Re-verified individually via clean single-CDEF test (full Book sweep); confirmed correct.
 Book	Avo Nice Day	4543	Yes	Confirmed via clean single-CDEF isolated test (fresh profile) Re-verified individually via clean single-CDEF test (full Book sweep); confirmed correct.
