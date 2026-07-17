@@ -59,6 +59,7 @@ char g_ResultsPath[MAX_PATH] = {};
 // One-by-one (F1/F2) manual mode paths.
 char g_OneByOneListPath[MAX_PATH] = {};   // onebyone_list.txt (presence = enable)
 char g_OneByOneIndexPath[MAX_PATH] = {};  // onebyone_index.txt (0-based cursor)
+char g_OneByOnePrimePath[MAX_PATH] = {};  // onebyone_prime.txt (optional CDEF added BEFORE target on F1)
 char g_GameDir[MAX_PATH] = {};            // <FTLC> root
 char g_FableExePath[MAX_PATH] = {};       // <FTLC>\Fable.exe
 
@@ -238,14 +239,47 @@ void SpawnCurrentOneByOne() {
     Log("[OneByOne] F1: no inventory yet — load a save first (CDEF %lu not spawned).", cdef);
     return;
   }
+
+  // Optional PRIME step: if onebyone_prime.txt holds a CDEF, add it FIRST (same
+  // session, same profile) before the target. Used to test whether granting a
+  // "wallet" item (e.g. 4306 OBJECT_HERO_MONEY_BAG) first lets gold defs add
+  // without crashing. Leave the file absent/empty for normal one-by-one.
+  {
+    FILE *pf = nullptr;
+    fopen_s(&pf, g_OneByOnePrimePath, "r");
+    if (pf) {
+      unsigned long prime = 0;
+      int got = fscanf_s(pf, "%lu", &prime);
+      fclose(pf);
+      if (got == 1 && prime != 0) {
+        Log("[OneByOne] F1: PRIME creating CDEF %lu first ...", prime);
+        void *pitem = CreateFableItem(prime);
+        if (pitem && SafeRead(pitem, dummy)) {
+          Log("[OneByOne] F1: PRIME add CDEF %lu ...", prime);
+          auto pfn = reinterpret_cast<AddItemToInventory_t>(kAddItemToInventoryAddr);
+          *g_pAddingItemFromMod = true;
+          char pr = pfn(inv, pitem, false, false, 0, true);
+          *g_pAddingItemFromMod = false;
+          Log("[OneByOne] F1: PRIME CDEF %lu -> add result %d. Now adding target ...",
+              prime, (int)(unsigned char)pr);
+        } else {
+          Log("[OneByOne] F1: PRIME CreateFableItem failed for CDEF %lu.", prime);
+        }
+      }
+    }
+  }
+
+  Log("[OneByOne] F1: creating CDEF %lu ...", cdef);
   void *item = CreateFableItem(cdef);
   if (!item || !SafeRead(item, dummy)) {
     Log("[OneByOne] F1: CreateFableItem failed for CDEF %lu.", cdef);
     return;
   }
+  Log("[OneByOne] F1: created item 0x%p, calling AddItemToInventory "
+      "(quick_access=false) ...", item);
   auto fn = reinterpret_cast<AddItemToInventory_t>(kAddItemToInventoryAddr);
   *g_pAddingItemFromMod = true;
-  char r = fn(inv, item, false, true, 0, true /*silent*/);
+  char r = fn(inv, item, false, false /*add_quick_access*/, 0, true /*silent*/);
   *g_pAddingItemFromMod = false;
   Log("[OneByOne] F1: spawned CDEF %lu (index %zu) -> add result %d.",
       cdef, g_OneByOneIndex, (int)(unsigned char)r);
@@ -494,6 +528,7 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD reason, LPVOID) {
     sprintf_s(g_ResultsPath, "%sbatch_results.csv", dir);
     sprintf_s(g_OneByOneListPath, "%sonebyone_list.txt", dir);
     sprintf_s(g_OneByOneIndexPath, "%sonebyone_index.txt", dir);
+    sprintf_s(g_OneByOnePrimePath, "%sonebyone_prime.txt", dir);
 
     // Derive the game root: dir is <FTLC>\mods\batch_test_mod\ — go up two levels.
     strcpy_s(g_GameDir, dir);
