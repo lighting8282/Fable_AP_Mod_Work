@@ -461,17 +461,17 @@ Potion	Health Potion
 Potion	Resurrection Phial			
 Potion	Will Master's Elixir			
 Potion	Will Potion			
-Quest	Avisto's Tablet			
+Quest	Avisto's Tablet	5192	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_SS_EXPRESSION_TABLET_A.
 Quest	Arban's Thaumaturgica	4576	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_MAZE_JOURNAL.
 Quest	Bandit Bandana			
-Quest	Bandit Boots			
+Quest	Bandit Boots	3411	No	CDEF is in the OBJECT_HERO_* clothing range, which CRASHES AddItemToInventory (worn equipment). Symbol: OBJECT_HERO_BOOTS_BANDITCAMP. Needs a wear-clothing grant path.
 Quest	Bandit Camp Pass	4531	Yes	Confirmed via clean single-CDEF isolated test (fresh profile).
-Quest	Bandit Gloves			
-Quest	Bandit Trousers			
+Quest	Bandit Gloves	3484	No	CDEF is in the OBJECT_HERO_* clothing range, which CRASHES AddItemToInventory (worn equipment). Symbol: OBJECT_HERO_GLOVES_BANDITCAMP. Needs a wear-clothing grant path.
+Quest	Bandit Trousers	3433	No	CDEF is in the OBJECT_HERO_* clothing range, which CRASHES AddItemToInventory (worn equipment). Symbol: OBJECT_HERO_TROUSERS_BANDITCAMP. Needs a wear-clothing grant path.
 Quest	Bandit Seal			
-Quest	Bandit Shirt			
+Quest	Bandit Shirt	3458	No	CDEF is in the OBJECT_HERO_* clothing range, which CRASHES AddItemToInventory (worn equipment). Symbol: OBJECT_HERO_SHIRT_BANDITCAMP. Needs a wear-clothing grant path.
 Quest	Blue Mushroom	5135	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_MUSHROOM_BLUE_01.
-Quest	Calran's Tablet			
+Quest	Calran's Tablet	5191	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_SS_EXPRESSION_TABLET_C.
 Quest	Cooking Apple			
 Quest	Dusty Notebook	4577	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_HAUNTED_DIARY_01.
 Quest	Fire Heart			
@@ -480,7 +480,7 @@ Quest	Fist Fight Level 2 Passed
 Quest	Fist Fight Level 3 Passed			
 Quest	Hexagon Key	5126	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_HEXAGON_DOOR_KEY.
 Quest	Key To Hostage Cage	5105	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_BANDIT_CAMP_HOSTAGE_KEY.
-Quest	Moryk's Tablet			
+Quest	Moryk's Tablet	5190	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_SS_EXPRESSION_TABLET_M.
 Quest	Nostro's Armor			No matching CDEF in scraped OBJECT tree (only NOSTRO_SWORD 5569 / NOSTRO_SHIELD 5570 exist). Armor/helmet may be in an unscraped def section.
 Quest	Nostro's Helmet			No matching CDEF in scraped OBJECT tree (only NOSTRO_SWORD 5569 / NOSTRO_SHIELD 5570 exist). Armor/helmet may be in an unscraped def section.
 Quest	Nostro's Shield	5570	No	CDEF confirmed (symbol OBJECT_NOSTRO_SHIELD_01); CRASHES AddItemToInventory - equipment. Name symbol-inferred.
@@ -498,7 +498,7 @@ Quest	Treasure Clue 4	4476	Yes	CDEF from exact symbol match (OBJECT_TREASURE_CLU
 Quest	Treasure Clue 5	4477	Yes	CDEF from exact symbol match (OBJECT_TREASURE_CLUE_N); pattern confirmed on clues 1-2, rest filled by symbol.
 Quest	Treasure Clue 6	4478	Yes	CDEF from exact symbol match (OBJECT_TREASURE_CLUE_N); pattern confirmed on clues 1-2, rest filled by symbol.
 Quest	Witch's Potion	5134	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_MUSHROOM_POTION_01 (non-obvious symbol name).
-Quest	Yeron's Tablet			
+Quest	Yeron's Tablet	5189	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_SS_EXPRESSION_TABLET_Y.
 Ranged	Apollo's Crossbow			
 Ranged	Arken's Crossbow			
 Ranged	Bandit Crossbow			
