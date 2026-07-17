@@ -453,14 +453,14 @@ Misc	Twinblade Hero Doll	4465	Yes	Confirmed via clean single-CDEF isolated test 
 Misc	Whisper Hero Doll	4466	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Not previously on sheet.
 Misc	Hobbe Killer Augmentation	2881	No	CDEF confirmed by symbol; CRASHES AddItemToInventory (item creates, add faults). Name symbol-inferred, not visually confirmed. Augmentations need an apply-to-weapon path. Not previously on sheet.
 Misc	Bandit Slayer Augmentation	2886	No	CDEF confirmed by symbol; CRASHES AddItemToInventory (item creates, add faults). Name symbol-inferred, not visually confirmed. Augmentations need an apply-to-weapon path. Not previously on sheet.
-Potion	Ages Of Might Potion			
-Potion	Ages Of Skill Potion			
-Potion	Ages Of Will Potion			
+Potion	Ages Of Might Potion	4297	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_STRENGTH_POTION. In-game shows 'Ages of Might'.
+Potion	Ages Of Skill Potion	4298	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_SKILL_POTION. In-game shows 'Ages of Skill'.
+Potion	Ages Of Will Potion	4296	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_WILL_POTION (deceptive - this is the permanent Ages potion). In-game shows 'Ages of the Will'.
 Potion	Elixir Of Life	4294	Yes	
-Potion	Health Potion			
-Potion	Resurrection Phial			
-Potion	Will Master's Elixir			
-Potion	Will Potion			
+Potion	Health Potion	4292	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_HEALTH_POTION.
+Potion	Resurrection Phial	4312	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_RESURRECTION_PHIAL.
+Potion	Will Master's Elixir	4295	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_SUPER_MANA_POTION (mirrors SUPER_HEALTH_POTION = Elixir Of Life).
+Potion	Will Potion	4293	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_MANA_POTION - NOT OBJECT_WILL_POTION (that's Ages Of Will). Will=mana in Fable.
 Quest	Avisto's Tablet	5192	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_SS_EXPRESSION_TABLET_A.
 Quest	Arban's Thaumaturgica	4576	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_MAZE_JOURNAL.
 Quest	Bandit Bandana			
