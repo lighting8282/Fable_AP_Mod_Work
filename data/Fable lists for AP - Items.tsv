@@ -695,7 +695,7 @@ Tool	Spade	4311	Yes	Confirmed via clean single-CDEF isolated test (fresh profile
 Tool	The Rod Of Champions	4310	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol FISHING_ROD_UPGRADED.
 Trophy	Archon's Circle			
 Trophy	Bandit Seal	4495	Yes	
-Trophy	Champion's Seal			
+Trophy	Champion's Seal	4480	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_CHAMPIONS_SEAL (562 is CHAMPIONS_SEAL_01, old dup).
 Trophy	Fire Heart Band	4527	Yes	
 Trophy	Fist Fighter's Trophy	4507	Yes	CDEF 4517 (OBJECT_TROPHY_PUNCH_CLUB_01) also tested ADDED_OK and displays as this same name in-game -- possible duplicate/variant, needs disambiguation before recording
 Trophy	Golden Fish	4513	Yes	
