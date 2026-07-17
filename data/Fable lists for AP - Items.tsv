@@ -462,7 +462,7 @@ Potion	Resurrection Phial	4312	Yes	Confirmed via clean single-CDEF isolated test
 Potion	Will Master's Elixir	4295	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_SUPER_MANA_POTION (mirrors SUPER_HEALTH_POTION = Elixir Of Life).
 Potion	Will Potion	4293	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_MANA_POTION - NOT OBJECT_WILL_POTION (that's Ages Of Will). Will=mana in Fable.
 Quest	Avisto's Tablet	5192	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_SS_EXPRESSION_TABLET_A.
-Quest	Arban's Thaumaturgica	4576	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_MAZE_JOURNAL.
+Quest	Arban's Thaumaturgica	4576	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_MAZE_JOURNAL. Re-verified individually via clean single-CDEF test.
 Quest	Bandit Bandana			
 Quest	Bandit Boots	3411	No	CDEF is in the OBJECT_HERO_* clothing range, which CRASHES AddItemToInventory (worn equipment). Symbol: OBJECT_HERO_BOOTS_BANDITCAMP. Needs a wear-clothing grant path.
 Quest	Bandit Camp Pass	4531	Yes	Confirmed via clean single-CDEF isolated test (fresh profile).
@@ -473,7 +473,7 @@ Quest	Bandit Shirt	3458	No	CDEF is in the OBJECT_HERO_* clothing range, which CR
 Quest	Blue Mushroom	5135	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_MUSHROOM_BLUE_01.
 Quest	Calran's Tablet	5191	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_SS_EXPRESSION_TABLET_C.
 Quest	Cooking Apple			
-Quest	Dusty Notebook	4577	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_HAUNTED_DIARY_01.
+Quest	Dusty Notebook	4577	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_HAUNTED_DIARY_01. Re-verified individually via clean single-CDEF test.
 Quest	Fire Heart			
 Quest	Fist Fight Level 1 Passed			
 Quest	Fist Fight Level 2 Passed			
