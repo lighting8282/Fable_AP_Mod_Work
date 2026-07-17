@@ -437,7 +437,7 @@ Misc	Slab Of Jeroen			No matching CDEF in scraped OBJECT tree - likely a quest t
 Misc	Tablet Of Torment			No matching CDEF in scraped OBJECT tree - likely a quest token/flag or in an unscraped FESN def section. Not testable via current method.
 Misc	Thunder Hero Doll	4464	Yes	Confirmed via clean single-CDEF isolated test (fresh profile).
 Misc	Doll Of You	4459	Yes	Confirmed via clean single-CDEF isolated test (fresh profile).
-Misc	Fist Fight Level 4 Passed			No matching CDEF in scraped OBJECT tree - likely a quest token/flag or in an unscraped FESN def section. Not testable via current method.
+Misc	Fist Fight Level 4 Passed	3782-3785 (crash)	No (crashes)	CRASHES AddItemToInventory (tested 3782 Bowerstone). Fist Fight cards are QUEST_CARD_*_PUNCH_CLUB 3782-3785 (Bowerstone/Bandit Camp/Knothole Glade/Oakvale). QUEST_CARD_* items crash the generic add like weapons/clothing - need a quest-grant path, not inventory-add.
 Misc	Flame Augmentation	2880	No	CDEF confirmed by symbol; CRASHES AddItemToInventory (item creates, add faults). Name symbol-inferred, not visually confirmed. Augmentations need an apply-to-weapon path.
 Misc	Experience Augmentation	2883	No	CDEF confirmed by symbol; CRASHES AddItemToInventory (item creates, add faults). Name symbol-inferred, not visually confirmed. Augmentations need an apply-to-weapon path.
 Misc	Health Augmentation	2884	No	CDEF confirmed (symbol OBJECT_HEALTH_AUGMENTATION); CRASHES AddItemToInventory (item creates, add faults). Name symbol-inferred, not visually confirmed. Augmentations need an apply-to-weapon path.
@@ -475,9 +475,9 @@ Quest	Calran's Tablet	5191	Yes	Confirmed via clean single-CDEF isolated test (fr
 Quest	Cooking Apple			
 Quest	Dusty Notebook	4577	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_HAUNTED_DIARY_01. Re-verified individually via clean single-CDEF test.
 Quest	Fire Heart			
-Quest	Fist Fight Level 1 Passed			
-Quest	Fist Fight Level 2 Passed			
-Quest	Fist Fight Level 3 Passed			
+Quest	Fist Fight Level 1 Passed	3782-3785 (crash)	No (crashes)	CRASHES AddItemToInventory (tested 3782 Bowerstone). Fist Fight cards are QUEST_CARD_*_PUNCH_CLUB 3782-3785 (Bowerstone/Bandit Camp/Knothole Glade/Oakvale). QUEST_CARD_* items crash the generic add like weapons/clothing - need a quest-grant path, not inventory-add.
+Quest	Fist Fight Level 2 Passed	3782-3785 (crash)	No (crashes)	CRASHES AddItemToInventory (tested 3782 Bowerstone). Fist Fight cards are QUEST_CARD_*_PUNCH_CLUB 3782-3785 (Bowerstone/Bandit Camp/Knothole Glade/Oakvale). QUEST_CARD_* items crash the generic add like weapons/clothing - need a quest-grant path, not inventory-add.
+Quest	Fist Fight Level 3 Passed	3782-3785 (crash)	No (crashes)	CRASHES AddItemToInventory (tested 3782 Bowerstone). Fist Fight cards are QUEST_CARD_*_PUNCH_CLUB 3782-3785 (Bowerstone/Bandit Camp/Knothole Glade/Oakvale). QUEST_CARD_* items crash the generic add like weapons/clothing - need a quest-grant path, not inventory-add.
 Quest	Hexagon Key	5126	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_HEXAGON_DOOR_KEY.
 Quest	Key To Hostage Cage	5105	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_BANDIT_CAMP_HOSTAGE_KEY.
 Quest	Moryk's Tablet	5190	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_SS_EXPRESSION_TABLET_M.
@@ -697,7 +697,7 @@ Trophy	Archon's Circle
 Trophy	Bandit Seal	4495	Yes	
 Trophy	Champion's Seal	4480	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_CHAMPIONS_SEAL (562 is CHAMPIONS_SEAL_01, old dup).
 Trophy	Fire Heart Band	4527	Yes	
-Trophy	Fist Fighter's Trophy	4507	Yes	CDEF 4517 (OBJECT_TROPHY_PUNCH_CLUB_01) also tested ADDED_OK and displays as this same name in-game -- possible duplicate/variant, needs disambiguation before recording
+Trophy	Fist Fighter's Trophy	3782-3785 (crash)	No (crashes)	CRASHES AddItemToInventory (tested 3782 Bowerstone). Fist Fight cards are QUEST_CARD_*_PUNCH_CLUB 3782-3785 (Bowerstone/Bandit Camp/Knothole Glade/Oakvale). QUEST_CARD_* items crash the generic add like weapons/clothing - need a quest-grant path, not inventory-add.
 Trophy	Golden Fish	4513	Yes	
 Trophy	Hobbe Head	4514	Yes	
 Trophy	Hobbe Tooth	4504	Yes	
