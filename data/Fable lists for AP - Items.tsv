@@ -470,7 +470,7 @@ Quest	Bandit Gloves
 Quest	Bandit Trousers			
 Quest	Bandit Seal			
 Quest	Bandit Shirt			
-Quest	Blue Mushroom			
+Quest	Blue Mushroom	5135	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_MUSHROOM_BLUE_01.
 Quest	Calran's Tablet			
 Quest	Cooking Apple			
 Quest	Dusty Notebook	4577	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_HAUNTED_DIARY_01.
@@ -481,10 +481,10 @@ Quest	Fist Fight Level 3 Passed
 Quest	Hexagon Key	5126	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_HEXAGON_DOOR_KEY.
 Quest	Key To Hostage Cage	5105	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_BANDIT_CAMP_HOSTAGE_KEY.
 Quest	Moryk's Tablet			
-Quest	Nostro's Armor			
-Quest	Nostro's Helmet			
-Quest	Nostro's Shield			
-Quest	Nostro's Sword			
+Quest	Nostro's Armor			No matching CDEF in scraped OBJECT tree (only NOSTRO_SWORD 5569 / NOSTRO_SHIELD 5570 exist). Armor/helmet may be in an unscraped def section.
+Quest	Nostro's Helmet			No matching CDEF in scraped OBJECT tree (only NOSTRO_SWORD 5569 / NOSTRO_SHIELD 5570 exist). Armor/helmet may be in an unscraped def section.
+Quest	Nostro's Shield	5570	No	CDEF confirmed (symbol OBJECT_NOSTRO_SHIELD_01); CRASHES AddItemToInventory - equipment. Name symbol-inferred.
+Quest	Nostro's Sword	5569	No	CDEF confirmed (symbol OBJECT_NOSTRO_SWORD_01); CRASHES AddItemToInventory - it's a weapon (equipment). Name symbol-inferred.
 Quest	Prison Cell Key	5102	Yes	Confirmed via clean single-CDEF isolated test (fresh profile).
 Quest	Letter From Cyril			
 Quest	Reply From Myra			
@@ -497,7 +497,7 @@ Quest	Treasure Clue 3	4475	Yes	CDEF from exact symbol match (OBJECT_TREASURE_CLU
 Quest	Treasure Clue 4	4476	Yes	CDEF from exact symbol match (OBJECT_TREASURE_CLUE_N); pattern confirmed on clues 1-2, rest filled by symbol.
 Quest	Treasure Clue 5	4477	Yes	CDEF from exact symbol match (OBJECT_TREASURE_CLUE_N); pattern confirmed on clues 1-2, rest filled by symbol.
 Quest	Treasure Clue 6	4478	Yes	CDEF from exact symbol match (OBJECT_TREASURE_CLUE_N); pattern confirmed on clues 1-2, rest filled by symbol.
-Quest	Witch's Potion			
+Quest	Witch's Potion	5134	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_MUSHROOM_POTION_01 (non-obvious symbol name).
 Quest	Yeron's Tablet			
 Ranged	Apollo's Crossbow			
 Ranged	Arken's Crossbow			
