@@ -270,18 +270,18 @@ Emote	Thanks
 Emote	Vulgar Thrust			
 Emote	Wait			
 Emote	Yeron			
-Food	Apple Pie			
-Food	Beer			
-Food	Blueberry Pie			
-Food	Carrot			
-Food	Crunchy Chick			
-Food	Fish 1			
-Food	Fish 2			
-Food	Golden Carrot			
-Food	Green Apple			
-Food	Moonfish			
-Food	Red Meat			
-Food	Tofu			
+Food	Apple Pie	4276	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_PIE_APPLE_01.
+Food	Beer	4449	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_BEER_TANKARD (4448 BEER_KEG is the quest/scenery keg).
+Food	Blueberry Pie	4277	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_PIE_BLUEBERRY_01.
+Food	Carrot	4283	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_CARROT.
+Food	Crunchy Chick	4289	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_CRUNCHY_CHICK.
+Food	Fish 1	4279	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_FISH_CARP_MEDIUM_01. In-game name is just 'Fish'. 4279-4282 are CARP_MEDIUM_01-04 variants, all display 'Fish'.
+Food	Fish 2	4280	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_FISH_CARP_MEDIUM_02. In-game name is just 'Fish' but a blue-colored model variant of 4279.
+Food	Golden Carrot	4287	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_GOLDEN_CARROT.
+Food	Green Apple	4274	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_APPLE_GREEN_01.
+Food	Moonfish	4286	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_MOONFISH.
+Food	Red Meat	4284	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_RED_MEAT_01 (4285 is RED_MEAT_02, likely a duplicate).
+Food	Tofu	4288	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_TOFU.
 Gift	Amethyst	4440	Yes	Confirmed via clean single-CDEF isolated test (fresh profile).
 Gift	Black Rose	5129	Yes	Confirmed via clean single-CDEF isolated test (fresh profile).
 Gift	Chocolates	4317	Yes	Confirmed via clean single-CDEF isolated test (fresh profile).
