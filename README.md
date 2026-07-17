@@ -31,10 +31,22 @@ One CDEF + one fresh profile removes all of that ambiguity — whatever single i
 - Some CDEFs are accepted by the engine but never appear anywhere (non-holdable internal tokens) — that's a valid, useful result too.
 - **Some CDEFs crash `AddItemToInventory` (0x005BF654).** The item *creates* fine (`CreateThing` succeeds) but the inventory-add itself faults. Known crashing classes — all things that need special handling the generic add doesn't do:
   - **Gold** (`OBJECT_GOLD_*`) — a stat counter, not a carried item.
-  - **Weapons** (`OBJECT_IRON_*`/`STEEL_*`/`EBONY_*`/`CRYSTAL_*`/`LEGENDARY_*` swords/axes/bows, ~5474+) — equipped items.
+  - **Weapons** (`OBJECT_IRON_*`/`STEEL_*`/`EBONY_*`/`CRYSTAL_*`/`LEGENDARY_*` swords/axes/bows, ~5474+) — equipped items. (5474 `OBJECT_IRON_LONGSWORD` is the reference case.)
   - **Clothing** (`OBJECT_HERO_*` 3404–3519) — worn-appearance parts.
-  - `OBJECT_TATTOO_CARD_01` (4617).
+  - **Augmentations** (`OBJECT_*_AUGMENTATION` 2877–2886) — applied to weapon slots, not carried.
+  - **Quest cards** (`OBJECT_QUEST_CARD_*`, e.g. the punch-club cards 3782–3785) — crash like weapons. NOTE the *real* Fist-Fight items are the `PUNCH_CLUB_MEMBERSHIP_L1/L2/L3` defs (4528–4530), which add cleanly — do not confuse them with the crashing quest cards.
+  - **Throwing orbs** (`OBJECT_THROWING_ORB_*` 4300–4304) — throwable-weapon class.
+  - Loose world props (e.g. `OBJECT_SPOON_01` 5431, `OBJECT_FIREBALL` 5613) and `OBJECT_TATTOO_CARD_01` (4617).
   Verified thorough for weapons: crashes on both a fresh **kid** profile and an **adult** save, with `quick_access` true *and* false, `silent` true *and* false, and with the **creator's own prebuilt `add_item_mod`** (not just ours). So it is not our method — it's the function. These categories each need a dedicated grant path (give-gold, equip-weapon, wear-clothing), which we have not located.
+
+## Deceptive symbols — trust the in-game name, not the symbol
+
+The FESN symbol is frequently **not** the display name. Re-verifying already-"mapped" items one-by-one has repeatedly caught mislabels and recovered items previously thought absent. Confirmed examples:
+- `OBJECT_TROPHY_DRAGON_GATE_01` (4524) displays as **"Archon's Circle"** — not "Dragon Gate". This recovered an item we'd marked absent, and exposed an old unverified "Dragon Gate = 4524" guess as wrong. No distinct "Dragon Gate" trophy exists.
+- The six "self-help" books (The Sock Method, Making Friends, Eyes of a Killer, The Ugly Guide, Windbreaker Rule Book, You Are Not a Bad Person) live under `OBJECT_BOOK_RAISE/REDUCE_SEXINESS/AGREEABILITY/SCARINESS` (4320–4325) — nowhere near the `BOOK_STORY`/`BOOK_GUILD` range.
+- `OBJECT_TROPHY_JOB_MASK_01` (4523) = "Jack's Mask"; `OBJECT_TROPHY_MAZE_HEAD_01` (4515) = "Maze's Clasp"; `OBJECT_WILL_POTION` (4296) = "Ages of the Will" while the plain "Will Potion" is `OBJECT_MANA_POTION` (4293).
+
+**Lesson:** before declaring a sheet item "absent," gap-analyze the CDEF band around related mapped items and test candidates — the display name is authoritative.
 
 ## Known blocker: clothing
 
@@ -60,12 +72,21 @@ We work in a personal copy of the shared Google Sheet, not the shared one direct
 - `tools/` — helper scripts (FESN dump parsing, symbol-name auto-matching); mostly superseded by one-by-one verification now.
 - `modified-files/` — our changes to the upstream `FableAnniversary-Random` repo (`dllmain.cpp`, `windowed_hook.cpp`, `deploy.bat`, `dinput8.sln`) — copy these over the upstream repo, see `SETUP.md`.
 
-## Next up
+## Status
 
-**Done:** trophies (4495–4527), books (4539–4577), haircut/beard/moustache cards (4326–4350), tattoo cards (4351–4427 + 4617-crashes). ~172 CDEFs mapped.
+**~247 sheet items verified-working** (single-CDEF isolated tests), plus **10 bonus items** the sheet omits.
 
-**Blocked (crash `AddItemToInventory`, need dedicated grant paths):** weapons (~5474–5636), clothing (`OBJECT_HERO_*` 3404–3519), gold. See the crash-classes note above.
+**Categories complete (all sheet items add cleanly and are re-verified):**
+- **Book 43/43** — includes the six `BOOK_RAISE/REDUCE` "self-help" books (4320–4325). All re-verified individually.
+- **Trophy** — all sheet trophies re-verified; Archon's Circle recovered (4524), Fist Fighter's Trophy mapped (4517), phantom "Dragon Gate" corrected.
+- **Potion 8/8**, **Food 12/12**, **Gift 13/13**, **Style 25/25**, **Tool 6/6**.
 
-**Next up (carried items that should add cleanly):** gifts (gems, roses, chocolates, rings), tools (fishing rod, lamp, spade, etc.), misc (dolls, relics), and remaining quest items not yet mapped.
+**Partial:** Tattoo (72/77 — a few custom/empty-slot + 4617-crash rows), Misc (dolls/sacks done; the 10 augmentations are known-CDEF-but-crash; 5 "artifact" names — Demon Relic, Rock of Necrilia, Skorm's Tear, Slab of Jeroen, Tablet of Torment — have no findable symbol), Quest (Fist Fight L1–3 = memberships 4528–4530; Bandit clothing + Nostro weapons are known-CDEF-but-crash).
 
-**Also open:** find the equip-weapon / wear-clothing / give-gold functions to unblock those categories (deeper RE, or ask the creator); reconcile a few fuzzy tattoo spellings flagged `VERIFY` in the TSV; decide whether to merge into the shared Google Sheet.
+**Blocked (crash `AddItemToInventory`, need dedicated grant paths):** weapons/Melee/Ranged (~5474–5636), clothing (`OBJECT_HERO_*` 3404–3519), gold, augmentations, quest cards, throwing orbs. See the crash-classes note above.
+
+**Not inventory items:** Emote (expressions) and Spell (`OBJECT_ABILITY_*_SPELL_DUMMY`) add nothing — they need ability-grant paths, not inventory-add.
+
+**Bonus items found (valid, not on the original sheet):** Adrenaline Potion (4299), Pocket Watch (4308), Jewel Box (4479), and the 7-item creature trade-drop cluster (`BALVERINE_CLAW`→Balverine Pelt, Nymph Wings, Troll Lump, Bandit Ears, Wasp Sting, Skeleton Bones, Hobbes Teeth, 4451–4457).
+
+**Also open:** find the equip-weapon / wear-clothing / give-gold / apply-augmentation functions to unblock those categories (deeper RE, or ask the creator); locate the 5 mystery Misc artifacts (likely a non-`OBJECT` FESN section, or not real TLC items); populate the personal Google Sheet from this TSV (currently only the repo TSV is up to date).
