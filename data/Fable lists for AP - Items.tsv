@@ -697,7 +697,7 @@ Trophy	Archon's Circle	4524	Yes	Confirmed via clean single-CDEF isolated test (f
 Trophy	Bandit Seal	4495	Yes	Re-verified individually via clean single-CDEF test (full Trophy sweep).
 Trophy	Champion's Seal	4480	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_CHAMPIONS_SEAL (562 is CHAMPIONS_SEAL_01, old dup). Re-verified individually via clean single-CDEF test (full Trophy sweep).
 Trophy	Fire Heart Band	4527	Yes	Re-verified individually via clean single-CDEF test (full Trophy sweep).
-Trophy	Fist Fighter's Trophy	3782-3785 (crash)	No (crashes)	CRASHES AddItemToInventory (tested 3782 Bowerstone). Fist Fight cards are QUEST_CARD_*_PUNCH_CLUB 3782-3785 (Bowerstone/Bandit Camp/Knothole Glade/Oakvale). QUEST_CARD_* items crash the generic add like weapons/clothing - need a quest-grant path, not inventory-add.
+Trophy	Fist Fighter's Trophy	4517	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_TROPHY_PUNCH_CLUB_01. (4507 PUNCHCLUB_TROPHY_KNOTHOLE may be a Knothole variant - untested.)
 Trophy	Golden Fish	4513	Yes	Re-verified individually via clean single-CDEF test (full Trophy sweep).
 Trophy	Hobbe Head	4514	Yes	Re-verified individually via clean single-CDEF test (full Trophy sweep).
 Trophy	Hobbe Tooth	4504	Yes	Re-verified individually via clean single-CDEF test (full Trophy sweep).
