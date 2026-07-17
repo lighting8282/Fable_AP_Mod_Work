@@ -1,47 +1,47 @@
 Category	Item	CDEF	Inventory?	Comments
-Book	A Hero's Journey I	4548	Yes	Confirmed via clean single-CDEF isolated test (fresh profile)
-Book	A Hero's Journey II	4542	Yes	Confirmed via clean single-CDEF isolated test (fresh profile)
-Book	A Hero's Journey III	4544	Yes	Confirmed via clean single-CDEF isolated test (fresh profile)
-Book	A History Of The Guild	4562	Yes	
-Book	A Love Story	4564	Yes	
-Book	Book Of Spells	4570	Yes	
-Book	Creatures Of Albion Book I	4556	Yes	
-Book	Creatures Of Albion Book II	4557	Yes	
-Book	Creatures Of Albion Book III	4558	Yes	
-Book	Creatures Of The North	4559	Yes	
+Book	A Hero's Journey I	4548	Yes	Confirmed via clean single-CDEF isolated test (fresh profile) Re-verified individually via clean single-CDEF test (full Book sweep); confirmed correct.
+Book	A Hero's Journey II	4542	Yes	Confirmed via clean single-CDEF isolated test (fresh profile) Re-verified individually via clean single-CDEF test (full Book sweep); confirmed correct.
+Book	A Hero's Journey III	4544	Yes	Confirmed via clean single-CDEF isolated test (fresh profile) Re-verified individually via clean single-CDEF test (full Book sweep); confirmed correct.
+Book	A History Of The Guild	4562	Yes	Re-verified individually via clean single-CDEF test (full Book sweep); confirmed correct.
+Book	A Love Story	4564	Yes	Re-verified individually via clean single-CDEF test (full Book sweep); confirmed correct.
+Book	Book Of Spells	4570	Yes	Re-verified individually via clean single-CDEF test (full Book sweep); confirmed correct.
+Book	Creatures Of Albion Book I	4556	Yes	Re-verified individually via clean single-CDEF test (full Book sweep); confirmed correct.
+Book	Creatures Of Albion Book II	4557	Yes	Re-verified individually via clean single-CDEF test (full Book sweep); confirmed correct.
+Book	Creatures Of Albion Book III	4558	Yes	Re-verified individually via clean single-CDEF test (full Book sweep); confirmed correct.
+Book	Creatures Of The North	4559	Yes	Re-verified individually via clean single-CDEF test (full Book sweep); confirmed correct.
 Book	Eyes Of A Killer			
-Book	Jack Of Blades	4563	Yes	
+Book	Jack Of Blades	4563	Yes	Re-verified individually via clean single-CDEF test (full Book sweep); confirmed correct.
 Book	Making Friends			
-Book	The Arena	4555	Yes	
-Book	The Dragons	4560	Yes	
-Book	The Guild Of Zeroes	4550	Yes	Confirmed via clean single-CDEF isolated test (fresh profile)
-Book	The Hierarchy Of Weapons	4572	Yes	
-Book	The Northern Wastes	4566	Yes	
-Book	The Oakvale Raid	4545	Yes	Confirmed via clean single-CDEF isolated test (fresh profile)
-Book	The Old Kingdom	4567	Yes	
-Book	The Other Land	4568	Yes	
-Book	The Pale Balverine	4573	Yes	
-Book	The Repentant Alchemist	4540	Yes	Confirmed via clean single-CDEF isolated test (fresh profile)
+Book	The Arena	4555	Yes	Re-verified individually via clean single-CDEF test (full Book sweep); confirmed correct.
+Book	The Dragons	4560	Yes	Re-verified individually via clean single-CDEF test (full Book sweep); confirmed correct.
+Book	The Guild Of Zeroes	4550	Yes	Confirmed via clean single-CDEF isolated test (fresh profile) Re-verified individually via clean single-CDEF test (full Book sweep); confirmed correct.
+Book	The Hierarchy Of Weapons	4572	Yes	Re-verified individually via clean single-CDEF test (full Book sweep); confirmed correct.
+Book	The Northern Wastes	4566	Yes	Re-verified individually via clean single-CDEF test (full Book sweep); confirmed correct.
+Book	The Oakvale Raid	4545	Yes	Confirmed via clean single-CDEF isolated test (fresh profile) Re-verified individually via clean single-CDEF test (full Book sweep); confirmed correct.
+Book	The Old Kingdom	4567	Yes	Re-verified individually via clean single-CDEF test (full Book sweep); confirmed correct.
+Book	The Other Land	4568	Yes	Re-verified individually via clean single-CDEF test (full Book sweep); confirmed correct.
+Book	The Pale Balverine	4573	Yes	Re-verified individually via clean single-CDEF test (full Book sweep); confirmed correct.
+Book	The Repentant Alchemist	4540	Yes	Confirmed via clean single-CDEF isolated test (fresh profile) Re-verified individually via clean single-CDEF test (full Book sweep); confirmed correct.
 Book	The Sock Method			
-Book	The Tailor's Tragedy	4552	Yes	Confirmed via clean single-CDEF isolated test (fresh profile) (BOOK_STORY_14)
-Book	The Tale Of Maxley	4565	Yes	
-Book	The Tale Of Twinblade	4571	Yes	
-Book	The Trials Of Aarkan	4546	Yes	Confirmed via clean single-CDEF isolated test (fresh profile)
-Book	The Trigamist	4553	Yes	Confirmed via clean single-CDEF isolated test (fresh profile) (BOOK_STORY_15)
+Book	The Tailor's Tragedy	4552	Yes	Confirmed via clean single-CDEF isolated test (fresh profile) (BOOK_STORY_14) Re-verified individually via clean single-CDEF test (full Book sweep); confirmed correct.
+Book	The Tale Of Maxley	4565	Yes	Re-verified individually via clean single-CDEF test (full Book sweep); confirmed correct.
+Book	The Tale Of Twinblade	4571	Yes	Re-verified individually via clean single-CDEF test (full Book sweep); confirmed correct.
+Book	The Trials Of Aarkan	4546	Yes	Confirmed via clean single-CDEF isolated test (fresh profile) Re-verified individually via clean single-CDEF test (full Book sweep); confirmed correct.
+Book	The Trigamist	4553	Yes	Confirmed via clean single-CDEF isolated test (fresh profile) (BOOK_STORY_15) Re-verified individually via clean single-CDEF test (full Book sweep); confirmed correct.
 Book	The Ugly Guide			
-Book	Three Haikus by Milo the Bard	4561	Yes	In-game shows as 'Three Haikus by Miko the Bard' -- sheet has 'Milo', likely a spelling variant/typo somewhere
+Book	Three Haikus by Milo the Bard	4561	Yes	In-game shows as 'Three Haikus by Miko the Bard' -- sheet has 'Milo', likely a spelling variant/typo somewhere Re-verified individually via clean single-CDEF test (full Book sweep); confirmed correct.
 Book	Windbreaker Rule Book			
 Book	You Are Not a Bad Person			
-Book	The Rotten Apple	4541	Yes	Confirmed via clean single-CDEF isolated test (fresh profile)
-Book	Sutter Family History	4539	Yes	Confirmed via clean single-CDEF isolated test (fresh profile)
-Book	Avo Nice Day	4543	Yes	Confirmed via clean single-CDEF isolated test (fresh profile)
-Book	The Bargate Poems	4547	Yes	Confirmed via clean single-CDEF isolated test (fresh profile)
-Book	The story of 'x'	4549	Yes	Confirmed via clean single-CDEF isolated test (fresh profile)
-Book	A Hero's Journey IV	4554	Yes	Confirmed via clean single-CDEF isolated test (fresh profile) (BOOK_STORY_16). Earlier batch read had 4551/4553/4554 scrambled.
-Book	Seers and Prophets	4569	Yes	Not previously on sheet; confirmed in-game
-Book	Theresa's Letter	4574	Yes	Not previously on sheet; confirmed in-game
-Book	The Bloodline	4575	Yes	Not previously on sheet; confirmed in-game
-Book	The Balverine Slayer	4551	Yes	Confirmed via clean single-CDEF isolated test (fresh profile) (BOOK_STORY_13)
+Book	The Rotten Apple	4541	Yes	Confirmed via clean single-CDEF isolated test (fresh profile) Re-verified individually via clean single-CDEF test (full Book sweep); confirmed correct.
+Book	Sutter Family History	4539	Yes	Confirmed via clean single-CDEF isolated test (fresh profile) Re-verified individually via clean single-CDEF test (full Book sweep); confirmed correct.
+Book	Avo Nice Day	4543	Yes	Confirmed via clean single-CDEF isolated test (fresh profile) Re-verified individually via clean single-CDEF test (full Book sweep); confirmed correct.
+Book	The Bargate Poems	4547	Yes	Confirmed via clean single-CDEF isolated test (fresh profile) Re-verified individually via clean single-CDEF test (full Book sweep); confirmed correct.
+Book	The story of 'x'	4549	Yes	Confirmed via clean single-CDEF isolated test (fresh profile) Re-verified individually via clean single-CDEF test (full Book sweep); confirmed correct.
+Book	A Hero's Journey IV	4554	Yes	Confirmed via clean single-CDEF isolated test (fresh profile) (BOOK_STORY_16). Earlier batch read had 4551/4553/4554 scrambled. Re-verified individually via clean single-CDEF test (full Book sweep); confirmed correct.
+Book	Seers and Prophets	4569	Yes	Not previously on sheet; confirmed in-game Re-verified individually via clean single-CDEF test (full Book sweep); confirmed correct.
+Book	Theresa's Letter	4574	Yes	Not previously on sheet; confirmed in-game Re-verified individually via clean single-CDEF test (full Book sweep); confirmed correct.
+Book	The Bloodline	4575	Yes	Not previously on sheet; confirmed in-game Re-verified individually via clean single-CDEF test (full Book sweep); confirmed correct.
+Book	The Balverine Slayer	4551	Yes	Confirmed via clean single-CDEF isolated test (fresh profile) (BOOK_STORY_13) Re-verified individually via clean single-CDEF test (full Book sweep); confirmed correct.
 				
 				
 				
