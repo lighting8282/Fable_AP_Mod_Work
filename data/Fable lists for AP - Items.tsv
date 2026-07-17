@@ -437,7 +437,7 @@ Misc	Slab Of Jeroen			No matching CDEF in scraped OBJECT tree - likely a quest t
 Misc	Tablet Of Torment			No matching CDEF in scraped OBJECT tree - likely a quest token/flag or in an unscraped FESN def section. Not testable via current method.
 Misc	Thunder Hero Doll	4464	Yes	Confirmed via clean single-CDEF isolated test (fresh profile).
 Misc	Doll Of You	4459	Yes	Confirmed via clean single-CDEF isolated test (fresh profile).
-Misc	Fist Fight Level 4 Passed	3782-3785 (crash)	No (crashes)	CRASHES AddItemToInventory (tested 3782 Bowerstone). Fist Fight cards are QUEST_CARD_*_PUNCH_CLUB 3782-3785 (Bowerstone/Bandit Camp/Knothole Glade/Oakvale). QUEST_CARD_* items crash the generic add like weapons/clothing - need a quest-grant path, not inventory-add.
+Misc	Fist Fight Level 4 Passed	(none)	No	No grantable def exists. Game has only PUNCH_CLUB_MEMBERSHIP_L1/L2/L3 (4528-4530). No L4 membership - 'Level 4 Passed' has no corresponding item. Likely a sheet artifact or handled by quest logic, not an inventory item.
 Misc	Flame Augmentation	2880	No	CDEF confirmed by symbol; CRASHES AddItemToInventory (item creates, add faults). Name symbol-inferred, not visually confirmed. Augmentations need an apply-to-weapon path.
 Misc	Experience Augmentation	2883	No	CDEF confirmed by symbol; CRASHES AddItemToInventory (item creates, add faults). Name symbol-inferred, not visually confirmed. Augmentations need an apply-to-weapon path.
 Misc	Health Augmentation	2884	No	CDEF confirmed (symbol OBJECT_HEALTH_AUGMENTATION); CRASHES AddItemToInventory (item creates, add faults). Name symbol-inferred, not visually confirmed. Augmentations need an apply-to-weapon path.
@@ -475,9 +475,9 @@ Quest	Calran's Tablet	5191	Yes	Confirmed via clean single-CDEF isolated test (fr
 Quest	Cooking Apple			
 Quest	Dusty Notebook	4577	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_HAUNTED_DIARY_01. Re-verified individually via clean single-CDEF test.
 Quest	Fire Heart			
-Quest	Fist Fight Level 1 Passed	3782-3785 (crash)	No (crashes)	CRASHES AddItemToInventory (tested 3782 Bowerstone). Fist Fight cards are QUEST_CARD_*_PUNCH_CLUB 3782-3785 (Bowerstone/Bandit Camp/Knothole Glade/Oakvale). QUEST_CARD_* items crash the generic add like weapons/clothing - need a quest-grant path, not inventory-add.
-Quest	Fist Fight Level 2 Passed	3782-3785 (crash)	No (crashes)	CRASHES AddItemToInventory (tested 3782 Bowerstone). Fist Fight cards are QUEST_CARD_*_PUNCH_CLUB 3782-3785 (Bowerstone/Bandit Camp/Knothole Glade/Oakvale). QUEST_CARD_* items crash the generic add like weapons/clothing - need a quest-grant path, not inventory-add.
-Quest	Fist Fight Level 3 Passed	3782-3785 (crash)	No (crashes)	CRASHES AddItemToInventory (tested 3782 Bowerstone). Fist Fight cards are QUEST_CARD_*_PUNCH_CLUB 3782-3785 (Bowerstone/Bandit Camp/Knothole Glade/Oakvale). QUEST_CARD_* items crash the generic add like weapons/clothing - need a quest-grant path, not inventory-add.
+Quest	Fist Fight Level 1 Passed	4528	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_PUNCH_CLUB_MEMBERSHIP_L1. NOTE: the real Fist Fight items are PUNCH_CLUB_MEMBERSHIP_L1/L2/L3 (4528-4530) which ADD CLEANLY - NOT the QUEST_CARD_*_PUNCH_CLUB cards (3782-3785) which crash.
+Quest	Fist Fight Level 2 Passed	4529	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_PUNCH_CLUB_MEMBERSHIP_L2.
+Quest	Fist Fight Level 3 Passed	4530	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_PUNCH_CLUB_MEMBERSHIP_L3.
 Quest	Hexagon Key	5126	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_HEXAGON_DOOR_KEY.
 Quest	Key To Hostage Cage	5105	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_BANDIT_CAMP_HOSTAGE_KEY.
 Quest	Moryk's Tablet	5190	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_SS_EXPRESSION_TABLET_M.
