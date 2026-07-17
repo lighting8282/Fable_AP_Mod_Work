@@ -693,40 +693,40 @@ Tool	Lamp	4307	Yes	Confirmed via clean single-CDEF isolated test (fresh profile)
 Tool	Money Bag	4306	Yes	Confirmed via clean single-CDEF isolated test (fresh profile).
 Tool	Spade	4311	Yes	Confirmed via clean single-CDEF isolated test (fresh profile).
 Tool	The Rod Of Champions	4310	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol FISHING_ROD_UPGRADED.
-Trophy	Archon's Circle			
-Trophy	Bandit Seal	4495	Yes	
-Trophy	Champion's Seal	4480	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_CHAMPIONS_SEAL (562 is CHAMPIONS_SEAL_01, old dup).
-Trophy	Fire Heart Band	4527	Yes	
+Trophy	Archon's Circle	4524	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_TROPHY_DRAGON_GATE_01 - DECEPTIVE: displays in-game as 'Archon's Circle', NOT 'Dragon Gate'. This resolves the previously-'absent' Archon's Circle AND corrects the old unverified 'Dragon Gate=4524' guess. Re-verified individually via clean single-CDEF test (full Trophy sweep).
+Trophy	Bandit Seal	4495	Yes	Re-verified individually via clean single-CDEF test (full Trophy sweep).
+Trophy	Champion's Seal	4480	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_CHAMPIONS_SEAL (562 is CHAMPIONS_SEAL_01, old dup). Re-verified individually via clean single-CDEF test (full Trophy sweep).
+Trophy	Fire Heart Band	4527	Yes	Re-verified individually via clean single-CDEF test (full Trophy sweep).
 Trophy	Fist Fighter's Trophy	3782-3785 (crash)	No (crashes)	CRASHES AddItemToInventory (tested 3782 Bowerstone). Fist Fight cards are QUEST_CARD_*_PUNCH_CLUB 3782-3785 (Bowerstone/Bandit Camp/Knothole Glade/Oakvale). QUEST_CARD_* items crash the generic add like weapons/clothing - need a quest-grant path, not inventory-add.
-Trophy	Golden Fish	4513	Yes	
-Trophy	Hobbe Head	4514	Yes	
-Trophy	Hobbe Tooth	4504	Yes	
-Trophy	King Scorpion Stinger	4498	Yes	
-Trophy	Kraken Tooth	4509	Yes	
-Trophy	Maze's Clasp	4515	Yes	
-Trophy	Map To Lost Bay	4525	Yes	
-Trophy	Minion's Helmet	4516	Yes	
-Trophy	Silver Arrow	4519	Yes	
-Trophy	Summoner's Gauntlet	4526	Yes	
-Trophy	Thunder's Helmet	4508	Yes	
-Trophy	Trader's Feather	4520	Yes	
-Trophy	Trader's Head	4505	Yes	
-Trophy	Undead Hand	4521	Yes	
-Trophy	Wasp Queen's Head	4496	Yes	
-Trophy	Whisper's Brooch	4522	Yes	
-Trophy	White Balverine Head	4512	Yes	
-Trophy	Evil Wasp Queen Head	4497	Yes	Dev test item - description says 'not for the final game!'; not previously on sheet
-Trophy	Balverine's Head	4499	Yes	Confirmed in-game; distinct from 'White Balverine Head' (row 656, still untested)
-Trophy	Claw	4500	Yes	Not previously on sheet; confirmed in-game
-Trophy	Hero's Axe	4501	Yes	Not previously on sheet; confirmed in-game
-Trophy	Hero's Belt	4502	Yes	Not previously on sheet; confirmed in-game
-Trophy	Lobster's Claw	4503	Yes	Not previously on sheet; confirmed in-game
-Trophy	Scrumpy Crate	4506	Yes	Not previously on sheet; confirmed in-game
-Trophy	Archaeologist's Map	4510	Yes	Not previously on sheet; confirmed in-game
-Trophy	Scorpion Sting	4518	Yes	Not previously on sheet; confirmed in-game; distinct from 'King Scorpion Stinger' (4498)
-Trophy	Dragon Scale	4511	Yes	Not previously on sheet; confirmed in-game (Trophies tab)
-Trophy	Jack's Mask	4523	Yes	Symbol OBJECT_TROPHY_JOB_MASK_01; shows in 'Items: Other' inventory tab in-game, not Trophies; not previously on sheet
-Trophy	Dragon Gate	4524	No	OBJECT_TROPHY_DRAGON_GATE_01; mod AddItemToInventory returned OK but item NOT visible in any inventory tab in-game -- likely internal/non-holdable token
+Trophy	Golden Fish	4513	Yes	Re-verified individually via clean single-CDEF test (full Trophy sweep).
+Trophy	Hobbe Head	4514	Yes	Re-verified individually via clean single-CDEF test (full Trophy sweep).
+Trophy	Hobbe Tooth	4504	Yes	Re-verified individually via clean single-CDEF test (full Trophy sweep).
+Trophy	King Scorpion Stinger	4498	Yes	Re-verified individually via clean single-CDEF test (full Trophy sweep).
+Trophy	Kraken Tooth	4509	Yes	Re-verified individually via clean single-CDEF test (full Trophy sweep).
+Trophy	Maze's Clasp	4515	Yes	Re-verified individually via clean single-CDEF test (full Trophy sweep).
+Trophy	Map To Lost Bay	4525	Yes	Re-verified individually via clean single-CDEF test (full Trophy sweep).
+Trophy	Minion's Helmet	4516	Yes	Re-verified individually via clean single-CDEF test (full Trophy sweep).
+Trophy	Silver Arrow	4519	Yes	Re-verified individually via clean single-CDEF test (full Trophy sweep).
+Trophy	Summoner's Gauntlet	4526	Yes	Re-verified individually via clean single-CDEF test (full Trophy sweep).
+Trophy	Thunder's Helmet	4508	Yes	Re-verified individually via clean single-CDEF test (full Trophy sweep).
+Trophy	Trader's Feather	4520	Yes	Re-verified individually via clean single-CDEF test (full Trophy sweep).
+Trophy	Trader's Head	4505	Yes	Re-verified individually via clean single-CDEF test (full Trophy sweep).
+Trophy	Undead Hand	4521	Yes	Re-verified individually via clean single-CDEF test (full Trophy sweep).
+Trophy	Wasp Queen's Head	4496	Yes	Re-verified individually via clean single-CDEF test (full Trophy sweep).
+Trophy	Whisper's Brooch	4522	Yes	Re-verified individually via clean single-CDEF test (full Trophy sweep).
+Trophy	White Balverine Head	4512	Yes	Re-verified individually via clean single-CDEF test (full Trophy sweep).
+Trophy	Evil Wasp Queen Head	4497	Yes	Dev test item - description says 'not for the final game!'; not previously on sheet Re-verified individually via clean single-CDEF test (full Trophy sweep).
+Trophy	Balverine's Head	4499	Yes	Confirmed in-game; distinct from 'White Balverine Head' (row 656, still untested) Re-verified individually via clean single-CDEF test (full Trophy sweep).
+Trophy	Claw	4500	Yes	Not previously on sheet; confirmed in-game Re-verified individually via clean single-CDEF test (full Trophy sweep).
+Trophy	Hero's Axe	4501	Yes	Not previously on sheet; confirmed in-game Re-verified individually via clean single-CDEF test (full Trophy sweep).
+Trophy	Hero's Belt	4502	Yes	Not previously on sheet; confirmed in-game Re-verified individually via clean single-CDEF test (full Trophy sweep).
+Trophy	Lobster's Claw	4503	Yes	Not previously on sheet; confirmed in-game Re-verified individually via clean single-CDEF test (full Trophy sweep).
+Trophy	Scrumpy Crate	4506	Yes	Not previously on sheet; confirmed in-game Re-verified individually via clean single-CDEF test (full Trophy sweep).
+Trophy	Archaeologist's Map	4510	Yes	Not previously on sheet; confirmed in-game Re-verified individually via clean single-CDEF test (full Trophy sweep).
+Trophy	Scorpion Sting	4518	Yes	Not previously on sheet; confirmed in-game; distinct from 'King Scorpion Stinger' (4498) Re-verified individually via clean single-CDEF test (full Trophy sweep).
+Trophy	Dragon Scale	4511	Yes	Not previously on sheet; confirmed in-game (Trophies tab) Re-verified individually via clean single-CDEF test (full Trophy sweep).
+Trophy	Jack's Mask	4523	Yes	Symbol OBJECT_TROPHY_JOB_MASK_01; shows in 'Items: Other' inventory tab in-game, not Trophies; not previously on sheet Re-verified individually via clean single-CDEF test (full Trophy sweep).
+Trophy	Dragon Gate	(none - see Archon's Circle)	No	CORRECTED: the only TROPHY_DRAGON_GATE def (4524) actually displays as 'Archon's Circle'. Old '4524' guess here was conf=No (never verified). No distinct 'Dragon Gate' trophy exists (4914-4916 NW_DRAGON_GATE are scenery). Likely a phantom/duplicate sheet row.
 Potion	Adrenaline Potion (BONUS - not on original sheet)	4299	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_ADRENALINE_POTION. Adds cleanly. NOT on the original sheet - a valid bonus item discovered via item-band gap sweep.
 Trophy	Balverine Pelt (BONUS - not on original sheet)	4451	Yes	Confirmed via clean single-CDEF isolated test. Symbol OBJECT_BALVERINE_CLAW (displays as 'Balverine Pelt'). Creature trade-drop; 4451-4457 are a trade-goods cluster absent from the sheet.
 Trophy	Nymph Wings (BONUS - not on original sheet)	4452	Yes	Confirmed via clean single-CDEF isolated test. Symbol OBJECT_NYMPH_WINGS. Creature trade-drop cluster 4451-4457.
@@ -735,3 +735,5 @@ Trophy	Bandit Ears (BONUS - not on original sheet)	4454	Yes	Confirmed via clean 
 Trophy	Wasp Sting (BONUS - not on original sheet)	4455	Yes	Confirmed via clean single-CDEF isolated test. Symbol OBJECT_WASP_STING. Creature trade-drop cluster 4451-4457.
 Trophy	Skeleton Bones (BONUS - not on original sheet)	4456	Yes	Confirmed via clean single-CDEF isolated test. Symbol OBJECT_SKELETON_BONES. Creature trade-drop cluster 4451-4457.
 Trophy	Hobbes Teeth (BONUS - not on original sheet)	4457	Yes	Confirmed via clean single-CDEF isolated test. Symbol OBJECT_HOBBES_TEETH. Creature trade-drop cluster 4451-4457 (7 items: Balverine Pelt, Nymph Wings, Troll Lump, Bandit Ears, Wasp Sting, Skeleton Bones, Hobbes Teeth). Note 4493 OBJECT_HOBBE_TEETH_BAG is separate.
+Misc	Pocket Watch (BONUS - not on original sheet)	4308	Yes	Confirmed via clean single-CDEF isolated test. Symbol OBJECT_POCKET_WATCH. Adds cleanly.
+Quest	Jewel Box (BONUS - not on original sheet)	4479	Yes	Confirmed via clean single-CDEF isolated test. Symbol OBJECT_HEIRLOOM_JEWELBOX_01. Quest heirloom item.
