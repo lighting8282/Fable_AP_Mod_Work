@@ -60,6 +60,7 @@ char g_ResultsPath[MAX_PATH] = {};
 char g_OneByOneListPath[MAX_PATH] = {};   // onebyone_list.txt (presence = enable)
 char g_OneByOneIndexPath[MAX_PATH] = {};  // onebyone_index.txt (0-based cursor)
 char g_OneByOnePrimePath[MAX_PATH] = {};  // onebyone_prime.txt (optional CDEF added BEFORE target on F1)
+char g_DumpValuePath[MAX_PATH] = {};      // dump_value.txt (F3 scans hero struct for this DWORD)
 char g_GameDir[MAX_PATH] = {};            // <FTLC> root
 char g_FableExePath[MAX_PATH] = {};       // <FTLC>\Fable.exe
 
@@ -106,6 +107,92 @@ void *GetHeroInventory() {
   void *pInventory = nullptr;
   SafeRead(reinterpret_cast<LPCVOID>(v5 + 4), pInventory);
   return pInventory;
+}
+
+// ---------------------------------------------------------------------------
+// Hero CThing resolution (subset of GetHeroInventory, stops at the hero Thing).
+// Optionally also returns the CPlayer object. Calls engine functions, so it
+// must run on the game's main thread (same rule as GetHeroInventory).
+// ---------------------------------------------------------------------------
+void *GetHeroThing(void **outPlayer = nullptr) {
+  void *pMainGame = nullptr;
+  if (!SafeRead(reinterpret_cast<LPCVOID>(kMainGameComponentPtr), pMainGame) || !pMainGame)
+    return nullptr;
+  void *pPlayerManager = nullptr;
+  if (!SafeRead(reinterpret_cast<LPCVOID>(static_cast<char *>(pMainGame) + kPlayerManagerOffset), pPlayerManager) || !pPlayerManager)
+    return nullptr;
+  auto getMainPlayer = reinterpret_cast<void *(__thiscall *)(void *)>(kGetMainPlayerAddr);
+  void *pPlayer = getMainPlayer(pPlayerManager);
+  if (!pPlayer)
+    return nullptr;
+  if (outPlayer)
+    *outPlayer = pPlayer;
+  auto getCharThing = reinterpret_cast<void *(__thiscall *)(void *)>(kGetCharacterThingAddr);
+  return getCharThing(pPlayer);
+}
+
+// A plausible in-process heap/data pointer (aligned, in the usable user range).
+static bool LooksLikePtr(DWORD v) {
+  return (v & 3u) == 0u && v >= 0x00010000u && v < 0x7FFF0000u;
+}
+
+// Scans the hero CThing (and the CPlayer object, and one pointer-hop deep from
+// the hero) for any 4-byte field equal to `target`, logging offsets. Run twice
+// with two known gold values; the offset that appears both times is the gold
+// field. Reads dump_value.txt for the target. MAIN-THREAD ONLY.
+void ScanHeroForValue() {
+  DWORD target = 0;
+  {
+    FILE *fp = nullptr;
+    fopen_s(&fp, g_DumpValuePath, "r");
+    if (fp) { if (fscanf_s(fp, "%lu", &target) != 1) target = 0; fclose(fp); }
+  }
+  if (target == 0) {
+    Log("[Scan] F3: no target — put your current gold amount in dump_value.txt first.");
+    return;
+  }
+  void *pPlayer = nullptr;
+  char *pHero = static_cast<char *>(GetHeroThing(&pPlayer));
+  if (!pHero) {
+    Log("[Scan] F3: no hero yet — load a save first.");
+    return;
+  }
+  Log("[Scan] F3: target=%lu (0x%lX)  hero=0x%p  player=0x%p", target, target, pHero, pPlayer);
+
+  constexpr size_t kDirectBytes = 0x600;  // scan window on each object
+  constexpr size_t kDeepBytes   = 0x300;  // window inside each pointed-to block
+  int hits = 0;
+
+  auto scanRegion = [&](const char *label, char *base, size_t bytes) {
+    if (!base) return;
+    for (size_t off = 0; off + 4 <= bytes; off += 4) {
+      DWORD v = 0;
+      if (SafeRead(base + off, v) && v == target) {
+        Log("[Scan]   DIRECT %s+0x%zX  (abs 0x%p)", label, off, base + off);
+        ++hits;
+      }
+    }
+  };
+
+  scanRegion("hero", pHero, kDirectBytes);
+  scanRegion("player", static_cast<char *>(pPlayer), kDirectBytes);
+
+  // One hop deep: for each pointer-looking slot in the hero object, scan the
+  // block it points at (this catches gold living in a stats/attribute sub-struct).
+  for (size_t off = 0; off + 4 <= kDirectBytes; off += 4) {
+    DWORD p = 0;
+    if (!SafeRead(pHero + off, p) || !LooksLikePtr(p))
+      continue;
+    for (size_t j = 0; j + 4 <= kDeepBytes; j += 4) {
+      DWORD v = 0;
+      if (SafeRead(reinterpret_cast<char *>(p) + j, v) && v == target) {
+        Log("[Scan]   DEEP hero+0x%zX -> +0x%zX  (ptr 0x%lX abs 0x%lX)", off, j, p, p + (DWORD)j);
+        ++hits;
+      }
+    }
+  }
+  Log("[Scan] F3: done — %d match(es). Run again at a DIFFERENT gold value; the "
+      "offset in BOTH runs is gold.", hits);
 }
 
 // ---------------------------------------------------------------------------
@@ -216,6 +303,7 @@ std::vector<DWORD> LoadCdefList() { return LoadCdefListFrom(g_CdefListPath); }
 #define WM_TEST_CDEF (WM_USER + 102)
 #define WM_CHECK_INVENTORY (WM_USER + 103)
 #define WM_ONEBYONE_SPAWN (WM_USER + 104)
+#define WM_DUMP_SCAN (WM_USER + 105)
 
 HWND g_GameHwnd = nullptr;
 WNDPROC g_OriginalWndProc = nullptr;
@@ -325,6 +413,10 @@ LRESULT CALLBACK GameWndProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
     SpawnCurrentOneByOne();
     return 0;
   }
+  if (uMsg == WM_DUMP_SCAN) {
+    ScanHeroForValue();
+    return 0;
+  }
   return CallWindowProc(g_OriginalWndProc, hwnd, uMsg, wParam, lParam);
 }
 
@@ -383,13 +475,17 @@ void RelaunchGame() {
 
 // Polls F1 (spawn current) and F2 (advance + restart game).
 DWORD WINAPI OneByOneHotkeyThread(LPVOID) {
-  bool f1was = false, f2was = false;
+  bool f1was = false, f2was = false, f3was = false;
   while (true) {
     bool f1 = (GetAsyncKeyState(VK_F1) & 0x8000) != 0;
     bool f2 = (GetAsyncKeyState(VK_F2) & 0x8000) != 0;
+    bool f3 = (GetAsyncKeyState(VK_F3) & 0x8000) != 0;
 
     if (f1 && !f1was)
       PostMessage(g_GameHwnd, WM_ONEBYONE_SPAWN, 0, 0);
+
+    if (f3 && !f3was)
+      PostMessage(g_GameHwnd, WM_DUMP_SCAN, 0, 0);
 
     if (f2 && !f2was) {
       g_OneByOneIndex += 1;
@@ -407,6 +503,7 @@ DWORD WINAPI OneByOneHotkeyThread(LPVOID) {
 
     f1was = f1;
     f2was = f2;
+    f3was = f3;
     Sleep(30);
   }
   return 0;
@@ -529,6 +626,7 @@ BOOL APIENTRY DllMain(HMODULE hModule, DWORD reason, LPVOID) {
     sprintf_s(g_OneByOneListPath, "%sonebyone_list.txt", dir);
     sprintf_s(g_OneByOneIndexPath, "%sonebyone_index.txt", dir);
     sprintf_s(g_OneByOnePrimePath, "%sonebyone_prime.txt", dir);
+    sprintf_s(g_DumpValuePath, "%sdump_value.txt", dir);
 
     // Derive the game root: dir is <FTLC>\mods\batch_test_mod\ — go up two levels.
     strcpy_s(g_GameDir, dir);
