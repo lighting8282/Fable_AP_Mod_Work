@@ -738,3 +738,11 @@ Trophy	Hobbes Teeth (BONUS - not on original sheet)	4457	Yes	Confirmed via clean
 Misc	Pocket Watch (BONUS - not on original sheet)	4308	Yes	Confirmed via clean single-CDEF isolated test. Symbol OBJECT_POCKET_WATCH. Adds cleanly.
 Quest	Jewel Box (BONUS - not on original sheet)	4479	Yes	Confirmed via clean single-CDEF isolated test. Symbol OBJECT_HEIRLOOM_JEWELBOX_01. Quest heirloom item.
 Quest	Ransom Note (BONUS - not on original sheet)	5118	Yes	Confirmed via clean single-CDEF isolated test. Symbol OBJECT_RANSOM_NOTE. Adds cleanly.
+Quest	Sister's Locket (BONUS - not on original sheet)	4481	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_SISTERS_LOCKET. Adds cleanly. Not on the original sheet.
+Quest	House Deeds (BONUS - not on original sheet)	4485	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_HOUSE_DEEDS. Adds cleanly. Not on the original sheet.
+Quest	Lady Grey's House Deeds (BONUS - not on original sheet)	4486	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_HOUSE_DEEDS_LADY_GREY. Adds cleanly. Not on the original sheet.
+Quest	Deeds To Your Old House (BONUS - not on original sheet)	4487	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_DEEDS_HEROS_HOUSE. Adds cleanly. Not on the original sheet.
+Quest	Map Piece (BONUS - not on original sheet)	4471	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_MAP_PIECE_01. Adds cleanly. Not on the original sheet.
+Quest	Secret Map (BONUS - not on original sheet)	4494	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_MAP_KEEPER_REWARD. Adds cleanly. Not on the original sheet.
+Quest	Hobbe Tooth Bag (BONUS - not on original sheet)	4493	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_HOBBE_TEETH_BAG. Adds cleanly. Not on the original sheet.
+Quest	Oakvale Gate Pass (BONUS - not on original sheet)	4472	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_OAK_VALE_GATE_PASS. Adds cleanly. Not on the original sheet.
