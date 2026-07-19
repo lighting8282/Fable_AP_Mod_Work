@@ -407,7 +407,7 @@ Melee	Steel Katana
 Melee	Steel Longsword			
 Melee	Steel Mace			
 Melee	Steel Pickhammer			
-Melee	Stick			
+Melee	Stick	4470	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_STICK.
 Melee	Solus Greatsword			
 Melee	Sophia's Sword			
 Melee	Sword Of Strategia			
@@ -746,3 +746,7 @@ Quest	Map Piece (BONUS - not on original sheet)	4471	Yes	Confirmed via clean sin
 Quest	Secret Map (BONUS - not on original sheet)	4494	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_MAP_KEEPER_REWARD. Adds cleanly. Not on the original sheet.
 Quest	Hobbe Tooth Bag (BONUS - not on original sheet)	4493	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_HOBBE_TEETH_BAG. Adds cleanly. Not on the original sheet.
 Quest	Oakvale Gate Pass (BONUS - not on original sheet)	4472	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_OAK_VALE_GATE_PASS. Adds cleanly. Not on the original sheet.
+Tool	Fishing Rod (variant, BONUS - not on original sheet)	4467	Yes	Confirmed via clean single-CDEF isolated test. Symbol OBJECT_FISHING_ROD_BASIC - displays the SAME name 'Fishing Rod' as the mapped 4309 OBJECT_FISHING_ROD. Three rod defs exist: 4309 (sheet's Fishing Rod), 4310 _UPGRADED, 4467 _BASIC.
+Misc	Old Boot (BONUS - not on original sheet)	4468	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_OLD_BOOT_01. Adds cleanly. Not on the original sheet.
+Misc	Rusty Bucket (BONUS - not on original sheet)	4469	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_BUCKET_RUSTY_01. Adds cleanly. Not on the original sheet.
+Misc	(dev placeholder - HAUNTED_DIARY_02)	4491	No	Confirmed via isolated test: displays literally as 'this is placeholder'. Dev/unused placeholder object, not a real item. Adds without crashing but is not usable content.
