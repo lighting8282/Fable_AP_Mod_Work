@@ -486,9 +486,9 @@ Quest	Nostro's Helmet			No matching CDEF in scraped OBJECT tree (only NOSTRO_SWO
 Quest	Nostro's Shield	5570	No	CDEF confirmed (symbol OBJECT_NOSTRO_SHIELD_01); CRASHES AddItemToInventory - equipment. Name symbol-inferred.
 Quest	Nostro's Sword	5569	No	CDEF confirmed (symbol OBJECT_NOSTRO_SWORD_01); CRASHES AddItemToInventory - it's a weapon (equipment). Name symbol-inferred.
 Quest	Prison Cell Key	5102	Yes	Confirmed via clean single-CDEF isolated test (fresh profile).
-Quest	Letter From Cyril			
-Quest	Reply From Myra			
-Quest	Letter From Myra			
+Quest	Letter From Cyril	4488	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_SICK_CHILD_MANS_LETTER - the Cyril/Myra letters are the SICK_CHILD trio 4488-4490.
+Quest	Reply From Myra	4489	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_SICK_CHILD_WOMANS_LETTER.
+Quest	Letter From Myra	4490	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_SICK_CHILD_WOMANS_HERO_LETTER.
 Quest	Silver Key	4313	Yes	Confirmed via clean single-CDEF isolated test (fresh profile).
 Quest	Scrawled Parchment			
 Quest	Treasure Clue 1	4473	Yes	Confirmed via clean single-CDEF isolated test (fresh profile).
