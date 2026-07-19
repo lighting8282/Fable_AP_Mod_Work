@@ -468,7 +468,7 @@ Quest	Bandit Boots	3411	No	CDEF is in the OBJECT_HERO_* clothing range, which CR
 Quest	Bandit Camp Pass	4531	Yes	Confirmed via clean single-CDEF isolated test (fresh profile).
 Quest	Bandit Gloves	3484	No	CDEF is in the OBJECT_HERO_* clothing range, which CRASHES AddItemToInventory (worn equipment). Symbol: OBJECT_HERO_GLOVES_BANDITCAMP. Needs a wear-clothing grant path.
 Quest	Bandit Trousers	3433	No	CDEF is in the OBJECT_HERO_* clothing range, which CRASHES AddItemToInventory (worn equipment). Symbol: OBJECT_HERO_TROUSERS_BANDITCAMP. Needs a wear-clothing grant path.
-Quest	Bandit Seal			
+Quest	Bandit Seal	4495	Yes	DUPLICATE ROW: same item as the Trophy 'Bandit Seal' (4495, OBJECT_TROPHY_BANDITKING_01), which was verified by isolated test. Sheet lists it under both Quest and Trophy.
 Quest	Bandit Shirt	3458	No	CDEF is in the OBJECT_HERO_* clothing range, which CRASHES AddItemToInventory (worn equipment). Symbol: OBJECT_HERO_SHIRT_BANDITCAMP. Needs a wear-clothing grant path.
 Quest	Blue Mushroom	5135	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_MUSHROOM_BLUE_01.
 Quest	Calran's Tablet	5191	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_SS_EXPRESSION_TABLET_C.
@@ -481,8 +481,8 @@ Quest	Fist Fight Level 3 Passed	4530	Yes	Confirmed via clean single-CDEF isolate
 Quest	Hexagon Key	5126	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_HEXAGON_DOOR_KEY.
 Quest	Key To Hostage Cage	5105	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_BANDIT_CAMP_HOSTAGE_KEY.
 Quest	Moryk's Tablet	5190	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_SS_EXPRESSION_TABLET_M.
-Quest	Nostro's Armor			No matching CDEF in scraped OBJECT tree (only NOSTRO_SWORD 5569 / NOSTRO_SHIELD 5570 exist). Armor/helmet may be in an unscraped def section.
-Quest	Nostro's Helmet			No matching CDEF in scraped OBJECT tree (only NOSTRO_SWORD 5569 / NOSTRO_SHIELD 5570 exist). Armor/helmet may be in an unscraped def section.
+Quest	Nostro's Armor	(none)	No	No def exists. The only NOSTRO objects in the OBJECT tree are 5569 OBJECT_NOSTRO_SWORD_01 and 5570 OBJECT_NOSTRO_SHIELD_01 (both crash - weapon/equip class). No armor or helmet def - likely a phantom sheet entry.
+Quest	Nostro's Helmet	(none)	No	No def exists. The only NOSTRO objects in the OBJECT tree are 5569 OBJECT_NOSTRO_SWORD_01 and 5570 OBJECT_NOSTRO_SHIELD_01 (both crash - weapon/equip class). No armor or helmet def - likely a phantom sheet entry.
 Quest	Nostro's Shield	5570	No	CDEF confirmed (symbol OBJECT_NOSTRO_SHIELD_01); CRASHES AddItemToInventory - equipment. Name symbol-inferred.
 Quest	Nostro's Sword	5569	No	CDEF confirmed (symbol OBJECT_NOSTRO_SWORD_01); CRASHES AddItemToInventory - it's a weapon (equipment). Name symbol-inferred.
 Quest	Prison Cell Key	5102	Yes	Confirmed via clean single-CDEF isolated test (fresh profile).
