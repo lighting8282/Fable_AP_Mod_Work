@@ -463,7 +463,7 @@ Potion	Will Master's Elixir	4295	Yes	Confirmed via clean single-CDEF isolated te
 Potion	Will Potion	4293	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_MANA_POTION - NOT OBJECT_WILL_POTION (that's Ages Of Will). Will=mana in Fable.
 Quest	Avisto's Tablet	5192	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_SS_EXPRESSION_TABLET_A.
 Quest	Arban's Thaumaturgica	4576	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_MAZE_JOURNAL. Re-verified individually via clean single-CDEF test.
-Quest	Bandit Bandana			
+Quest	Bandit Bandana	3502	No (crashes)	CDEF identified by symbol: OBJECT_HERO_HAT_BANDITCAMP - completes the BANDITCAMP set (boots 3411, trousers 3433, shirt 3458, gloves 3484, hat 3502). NOT individually spawn-tested: it is HERO_* clothing, the same class as its 4 verified-crashing siblings, so it will crash AddItemToInventory. Needs the wear-clothing grant path.
 Quest	Bandit Boots	3411	No	CDEF is in the OBJECT_HERO_* clothing range, which CRASHES AddItemToInventory (worn equipment). Symbol: OBJECT_HERO_BOOTS_BANDITCAMP. Needs a wear-clothing grant path.
 Quest	Bandit Camp Pass	4531	Yes	Confirmed via clean single-CDEF isolated test (fresh profile).
 Quest	Bandit Gloves	3484	No	CDEF is in the OBJECT_HERO_* clothing range, which CRASHES AddItemToInventory (worn equipment). Symbol: OBJECT_HERO_GLOVES_BANDITCAMP. Needs a wear-clothing grant path.
@@ -472,9 +472,9 @@ Quest	Bandit Seal
 Quest	Bandit Shirt	3458	No	CDEF is in the OBJECT_HERO_* clothing range, which CRASHES AddItemToInventory (worn equipment). Symbol: OBJECT_HERO_SHIRT_BANDITCAMP. Needs a wear-clothing grant path.
 Quest	Blue Mushroom	5135	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_MUSHROOM_BLUE_01.
 Quest	Calran's Tablet	5191	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_SS_EXPRESSION_TABLET_C.
-Quest	Cooking Apple			
+Quest	Cooking Apple	4275	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_APPLE_RED_01 - DECEPTIVE: displays as 'Cooking Apple' (Quest), not a food 'Red Apple'.
 Quest	Dusty Notebook	4577	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_HAUNTED_DIARY_01. Re-verified individually via clean single-CDEF test.
-Quest	Fire Heart			
+Quest	Fire Heart	3672	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_LPDD_FIREHEART_01 (NOT the crashing QUEST_CARD_FIRE_HEART 3718; 4527 TROPHY_FIREHEART_01 is the separate 'Fire Heart Band' trophy).
 Quest	Fist Fight Level 1 Passed	4528	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_PUNCH_CLUB_MEMBERSHIP_L1. NOTE: the real Fist Fight items are PUNCH_CLUB_MEMBERSHIP_L1/L2/L3 (4528-4530) which ADD CLEANLY - NOT the QUEST_CARD_*_PUNCH_CLUB cards (3782-3785) which crash.
 Quest	Fist Fight Level 2 Passed	4529	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_PUNCH_CLUB_MEMBERSHIP_L2.
 Quest	Fist Fight Level 3 Passed	4530	Yes	Confirmed via clean single-CDEF isolated test (fresh profile). Symbol OBJECT_PUNCH_CLUB_MEMBERSHIP_L3.
@@ -737,3 +737,4 @@ Trophy	Skeleton Bones (BONUS - not on original sheet)	4456	Yes	Confirmed via cle
 Trophy	Hobbes Teeth (BONUS - not on original sheet)	4457	Yes	Confirmed via clean single-CDEF isolated test. Symbol OBJECT_HOBBES_TEETH. Creature trade-drop cluster 4451-4457 (7 items: Balverine Pelt, Nymph Wings, Troll Lump, Bandit Ears, Wasp Sting, Skeleton Bones, Hobbes Teeth). Note 4493 OBJECT_HOBBE_TEETH_BAG is separate.
 Misc	Pocket Watch (BONUS - not on original sheet)	4308	Yes	Confirmed via clean single-CDEF isolated test. Symbol OBJECT_POCKET_WATCH. Adds cleanly.
 Quest	Jewel Box (BONUS - not on original sheet)	4479	Yes	Confirmed via clean single-CDEF isolated test. Symbol OBJECT_HEIRLOOM_JEWELBOX_01. Quest heirloom item.
+Quest	Ransom Note (BONUS - not on original sheet)	5118	Yes	Confirmed via clean single-CDEF isolated test. Symbol OBJECT_RANSOM_NOTE. Adds cleanly.
